@@ -1,0 +1,32 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8022
+spring:
+  application:
+    name: emailSender
+
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+kafka:
+  consumer:
+    bootstrap-servers: localhost:9092
+    group-id: emailSender-group
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    properties:
+      spring.json.trusted.packages: com.emailsender.email.dto
+jackson:
+  serialization:
+    WRITE_DATES_AS_TIMESTAMPS: false
+  deserialization:
+    READ_DATE_TIMESTAMPS_AS_NANOSECONDS: false

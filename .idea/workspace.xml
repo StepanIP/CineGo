@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c21a0062-5ff2-4598-a166-944a8da4e95d" name="Changes" comment="Updated emailSender configuration">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emailsender/src/test/java/com/emailsender/email/EmailSenderApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/controller/ActorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/controller/GenreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/domain/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/domain/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/ActorRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/ActorResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/GenreRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/GenreResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/mapper/ActorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/mapper/GenreMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/repository/ActorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/repository/GenreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/service/ActorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/service/GenreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/Cinema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/CinemaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/CinemaDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/CinemaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/CinemaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/cinema/CinemaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ActorResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/GenreResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_atomikos_util_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_transactions_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_transactions_api_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_transactions_jdbc_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_transactions_jms_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atomikos_transactions_jta_4_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_6_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_6_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_api_3_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_3_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_zerodep_3_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_luben_zstd_jni_1_5_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_jersey3_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_jersey3_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_opencsv_opencsv_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_stoyanr_evictor_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_12_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_12_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_12_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_12_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_x_stream_mxparser_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_context_propagation_1_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_context_propagation_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_11_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_11_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_jakarta9_1_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_11_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_tracing_1_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_tracing_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_tracing_bridge_brave_1_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_tracing_bridge_brave_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_101_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_1_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_1_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_5_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_aws_brave_propagation_aws_0_23_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_5_15_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_5_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_context_slf4j_5_15_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_context_slf4j_5_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_15_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_16_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_16_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_16_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_23_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_javax_mail_api_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_14_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_glxn_qrgen_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_i2p_crypto_eddsa_0_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_12_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_client5_httpclient5_5_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_5_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_h2_5_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_3_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_sshd_sshd_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_sshd_sshd_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_sshd_sshd_osgi_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_sshd_sshd_sftp_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_20_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_24_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_awaitility_awaitility_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk18on_1_73.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk18on_1_73.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk18on_1_74.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcutil_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcutil_jdk18on_1_73.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_31_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_jakarta_mail_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_6_4_0_202211300538_r.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_6_4_0_202211300538_r.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_ssh_apache_6_4_0_202211300538_r.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_spring_bridge_3_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_connectors_jersey_apache_connector_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_inject_jersey_hk2_3_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_2_13_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_29_2_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_17_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_liquibase_liquibase_core_4_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_5_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_processor_1_5_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_duct_tape_duct_tape_1_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_2_0_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jta_atomikos_2_7_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_server_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_4_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_4_1_0_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_3_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_2_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_12_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_database_commons_1_18_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_jdbc_1_18_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_postgresql_1_19_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_testcontainers_1_18_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_8_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CinemaMicroService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CinemaMicroService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akhq-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/akhq-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/config-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/config-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/CurrenciesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/CurrenciesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/ExchangeRateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/dto/CurrencyDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/dto/ExchangeRateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/dto/ExchangeRateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/ControllerErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/ControllerErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/exceptions/JsonParseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/exception/exceptions/JsonParseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/nbpApiClient/ExchangeRateApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/nbpApiClient/ExchangeRateApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/nbpApiClient/ExchangeRateScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/java/com/currencies/nbpApiClient/ExchangeRateScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/test/java/com/currencies/ExchangeRateControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/test/java/com/currencies/ExchangeRateControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/currencies/src/test/java/com/currencies/ExchangeRateServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/currencies/src/test/java/com/currencies/ExchangeRateServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/ConfirmationEmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/ConfirmationEmailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/EmailWithTicketPdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/EmailWithTicketPdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/dto/ConfirmationEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/dto/ConfirmationEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/dto/EmailWithTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/dto/EmailWithTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/qrCode/GenerateQrCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/qrCode/GenerateQrCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/ticket/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/java/com/emailsender/email/ticket/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/test/java/com/emailsender/EmailsenderApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailsender/src/test/java/com/emailsender/email/KafkaEmailListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emailsender/src/test/java/com/emailsender/email/KafkaEmailListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/film.iml" beforeDir="false" afterPath="$PROJECT_DIR$/film/film.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/domain/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/mapper/FilmMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/repository/FilmRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/service/FilmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/CreatedFilmDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/CreatedFilmDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/FilmRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/FilmRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/FilmResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/dto/FilmResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/exception/ControllerErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/exception/ControllerErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/java/com/service/film/exception/exceptions/AlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/java/com/service/film/exception/exceptions/AlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/resources/filmdatabase/01-create-film-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/resources/filmdatabase/01-create-film-table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/main/resources/filmdatabase/02-add-films.sql" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/main/resources/filmdatabase/02-add-films.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/test/java/com/service/film/FilmControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/test/java/com/service/film/FilmControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/src/test/java/com/service/film/FilmServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/film/src/test/java/com/service/film/FilmServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/ScreeningApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/ScreeningApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/ControllerErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/ControllerErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/exceptions/AlreadyTakenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/exceptions/AlreadyTakenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/common/exception/exceptions/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/Screening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/ScreeningValidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/client/FilmClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/client/FilmClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/CreatedScreeningDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/CreatedScreeningDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningAvailableSeats.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningAvailableSeats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/screening/dto/ScreeningResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/java/com/screening/seat/SeatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/01-create-table-screening.sql" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/01-create-table-screening.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/02-create-seats-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/02-create-seats-table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/03-add-screenings.sql" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/03-add-screenings.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningValidateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/ScreeningValidateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/client/FilmClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/test/java/com/screening/screening/client/FilmClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screening/src/test/java/com/screening/seat/SeatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/screening/src/test/java/com/screening/seat/SeatServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/microservice-architecture/MicroserviceArchitectureCinema.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/microservice-architecture/architecture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/microservice-architecture/architectureMS.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/4.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/5.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/6.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/7.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/email.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/ticket.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/youtube.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/steps/steps/ytpic.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/EmailWithTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/EmailWithTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/ExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/ExchangeRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/FilmDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/dto/FilmDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/exception/ControllerErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/common/exception/ControllerErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/CurrenciesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/CurrenciesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/ScreeningClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/ScreeningClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/feignClient/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPriceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/main/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPriceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/TicketApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/TicketApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/KafkaProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/KafkaProducerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/TicketControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/TicketControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/TicketServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/TicketServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPriceCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/src/test/java/com/ticket/ticketingSystem/ticketPriceCalculator/TicketPriceCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/ConfirmUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/ConfirmUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/ConfirmationEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/ConfirmationEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/confirmation/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/dto/CreatedUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/dto/CreatedUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/dto/UserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/dto/UserResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/ControllerErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/ControllerErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/AlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/AlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/PasswordConflictException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/user/user/exception/exceptions/PasswordConflictException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/test/java/com/user/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/test/java/com/user/user/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/user/user.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/kafka-integration" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ZD3HWPmBF3Ramd3659MokA0BUm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.docker-compose.yml.filmDB: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in currencies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeRateControllerTest.should_find_rate_by_code.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.film [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CurrenciesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EmailSenderApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FilmApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ScreeningApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TicketApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/VOXLOUD/api-gateway&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;751887dbbf50f72c2f4fdb7a416a48af&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;,
+      &quot;GenericSQL&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;GenericSQL&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\emailsender\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\steps\steps" />
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\steps\microservice-architecture" />
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\steps" />
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\microservice-architecture" />
+      <recent name="C:\Users\Gimi\Desktop\CinemaMicroService\emailsender\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.screening" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ticket.ticketingSystem.ticketPriceCalculator" />
+      <recent name="com.ticket.ticketingSystem" />
+      <recent name="com.screening.seat" />
+      <recent name="com.screening.screening.client" />
+      <recent name="com.screening.screening" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.screening.screening.dto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+        <option value="SwaggerCodegen" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DiscoveryApplication">
+    <configuration name="ExchangeRateControllerTest.should_find_rate_by_code" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="currencies" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.currencies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.currencies" />
+      <option name="MAIN_CLASS_NAME" value="com.currencies.ExchangeRateControllerTest" />
+      <option name="METHOD_NAME" value="should_find_rate_by_code" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrenciesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="currencies" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.currencies.CurrenciesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.discovery.DiscoveryApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.discovery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailSenderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="emailsender" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.emailsender.EmailSenderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="film" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.service.film.FilmApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScreeningApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="screening" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.screening.ScreeningApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.screening.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ticket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticket.TicketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.filmDB: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="filmDB" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.filmDB: Compose Deployment" />
+      <item itemvalue="JUnit.ExchangeRateControllerTest.should_find_rate_by_code" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.CurrenciesApplication" />
+      <item itemvalue="Spring Boot.EmailSenderApplication" />
+      <item itemvalue="Spring Boot.FilmApplication" />
+      <item itemvalue="Spring Boot.TicketApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="Spring Boot.DiscoveryApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.ScreeningApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ScreeningApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.DiscoveryApplication" />
+        <item itemvalue="Docker.docker-compose.yml.filmDB: Compose Deployment" />
+        <item itemvalue="JUnit.ExchangeRateControllerTest.should_find_rate_by_code" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c21a0062-5ff2-4598-a166-944a8da4e95d" name="Changes" comment="" />
+      <created>1701942734646</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701942734646</updated>
+      <workItem from="1701942735883" duration="3377000" />
+      <workItem from="1701956249003" duration="8292000" />
+      <workItem from="1701976404534" duration="8744000" />
+      <workItem from="1702022664675" duration="1750000" />
+      <workItem from="1702029918524" duration="1583000" />
+      <workItem from="1702043657509" duration="2803000" />
+      <workItem from="1702059793507" duration="3502000" />
+      <workItem from="1702063680386" duration="332000" />
+      <workItem from="1702289488278" duration="1618000" />
+      <workItem from="1702300679813" duration="8056000" />
+      <workItem from="1702313667080" duration="1528000" />
+      <workItem from="1702331847631" duration="4070000" />
+      <workItem from="1702364394328" duration="1339000" />
+      <workItem from="1702366755591" duration="479000" />
+      <workItem from="1702376803094" duration="1990000" />
+      <workItem from="1702419223289" duration="3187000" />
+      <workItem from="1702452950615" duration="402000" />
+      <workItem from="1702453372817" duration="441000" />
+      <workItem from="1702482621683" duration="11149000" />
+      <workItem from="1702543737737" duration="6916000" />
+      <workItem from="1702560965259" duration="281000" />
+      <workItem from="1702567891572" duration="3406000" />
+      <workItem from="1702628911989" duration="577000" />
+      <workItem from="1702632144463" duration="13066000" />
+      <workItem from="1702720556995" duration="6531000" />
+      <workItem from="1702747763795" duration="5807000" />
+      <workItem from="1702805860031" duration="7007000" />
+      <workItem from="1702830964718" duration="855000" />
+      <workItem from="1702836267424" duration="1650000" />
+      <workItem from="1702969380321" duration="3508000" />
+      <workItem from="1703065207290" duration="115000" />
+      <workItem from="1704381345836" duration="8935000" />
+      <workItem from="1704470600877" duration="6156000" />
+      <workItem from="1704528257148" duration="482000" />
+      <workItem from="1704540726025" duration="3651000" />
+      <workItem from="1704632412415" duration="5069000" />
+      <workItem from="1704706476103" duration="1398000" />
+      <workItem from="1704716775984" duration="118000" />
+      <workItem from="1704737139512" duration="5811000" />
+      <workItem from="1704797243418" duration="12017000" />
+      <workItem from="1704810942605" duration="159000" />
+      <workItem from="1704812333765" duration="189000" />
+      <workItem from="1704812588054" duration="2670000" />
+      <workItem from="1704816519224" duration="1782000" />
+      <workItem from="1704873799147" duration="5442000" />
+      <workItem from="1704907239264" duration="1051000" />
+      <workItem from="1705085049475" duration="1935000" />
+      <workItem from="1707227560941" duration="4503000" />
+      <workItem from="1707255445287" duration="3748000" />
+      <workItem from="1707292358900" duration="5494000" />
+      <workItem from="1707299652723" duration="310000" />
+      <workItem from="1707309695290" duration="3705000" />
+      <workItem from="1707314085008" duration="418000" />
+      <workItem from="1747926806198" duration="3669000" />
+      <workItem from="1747985375266" duration="623000" />
+      <workItem from="1748103676907" duration="81000" />
+      <workItem from="1748103800536" duration="22184000" />
+      <workItem from="1748193793097" duration="4200000" />
+      <workItem from="1748268618575" duration="704000" />
+    </task>
+    <task id="LOCAL-00034" summary="Code refactoring">
+      <created>1702422071729</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1702422071729</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added messages.properties with messages">
+      <created>1702422091881</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1702422091881</updated>
+    </task>
+    <task id="LOCAL-00036" summary="MicroServices configuration">
+      <created>1702422150228</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1702422150228</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Configuration">
+      <created>1702837608636</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837608636</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added new configuration">
+      <created>1702837653479</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837653479</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Created dto class">
+      <created>1702837748430</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837748430</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Created TicketPriceCalculator">
+      <created>1702837800378</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837800378</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Created enum classes">
+      <created>1702837843247</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837843247</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Created Ticket Entity">
+      <created>1702837863863</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837863863</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Created TicketController with endpoint">
+      <created>1702837899517</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1702837899517</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added zipkin dependency">
+      <created>1702934088697</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1702934088697</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Created zipkin docker-compose">
+      <created>1702934112527</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1702934112527</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added new configuration">
+      <created>1702934139393</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1702934139393</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Code refactoring">
+      <created>1704396311833</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1704396311833</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Code refactoring">
+      <created>1704396326925</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1704396326925</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added create method">
+      <created>1704473100505</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1704473100505</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Added factory pattern and change loops to streams">
+      <created>1704473253450</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1704473253450</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added properties to pom.xml for testing">
+      <created>1704553277516</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553277516</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Created ScreeningServiceTest">
+      <created>1704553295291</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553295292</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Created ScreeningValidate with tests">
+      <created>1704553310565</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553310565</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Created ScreeningValidate with tests">
+      <created>1704553324707</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553324707</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Created ScreeningControllerTest with tests">
+      <created>1704553343811</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553343811</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Created SeatServiceTest with tests">
+      <created>1704553356673</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553356673</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Created FilmClientTest with tests">
+      <created>1704553369445</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1704553369446</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Code refactoring">
+      <created>1704710839364</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1704710839364</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Added microservice architecture.PNG">
+      <created>1704710860158</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1704710860158</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Added liquibase dependencies to pom.xml">
+      <created>1704804928691</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1704804928691</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added liquibase classpath to configuration">
+      <created>1704804993134</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1704804993134</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Code refactoring">
+      <created>1704805049210</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805049210</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Added 01-create-film-table.sql">
+      <created>1704805099043</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805099043</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Added 02-add-films.sql">
+      <created>1704805111119</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805111119</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Added 03-create-table-screening.sql">
+      <created>1704805121106</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805121106</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Added 04-create-seats-table.sql">
+      <created>1704805130906</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805130906</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Added 05-add-screenings.sql">
+      <created>1704805141717</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805141717</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Added 06-add-seats.sql">
+      <created>1704805152226</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805152226</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Project configuration">
+      <created>1704805168766</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1704805168767</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Added steps">
+      <created>1704811071778</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1704811071778</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Code refactoring">
+      <created>1704811091474</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1704811091474</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Added youtube.PNG">
+      <created>1704816701440</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1704816701440</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update screening list in 05-add-screenings.sql">
+      <created>1704907306589</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1704907306590</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Added new  microservice architecture schema">
+      <created>1707236724588</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1707236724588</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Updated screenings database">
+      <created>1707314196278</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314196278</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Created akhq-config.yml and added kafka configuration">
+      <created>1707314240339</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314240339</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Deleted docker-compose.yml for all application">
+      <created>1707314292900</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314292900</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Deleted appconfig.yml">
+      <created>1707314303407</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314303407</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Added ytpic.PNG">
+      <created>1707314329530</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314329530</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Added kafkahq , updated kafka configuration and added all application docker to main docker-compose.yml">
+      <created>1707314422604</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314422604</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Updated emailSender application.properties">
+      <created>1707314449108</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314449108</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Updated emailSender configuration">
+      <created>1707314484591</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314484591</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Created SeatServiceTest with tests" />
+    <MESSAGE value="Created FilmClientTest with tests" />
+    <MESSAGE value="Added microservice architecture.PNG" />
+    <MESSAGE value="Added liquibase dependencies to pom.xml" />
+    <MESSAGE value="Added liquibase classpath to configuration" />
+    <MESSAGE value="Added 01-create-film-table.sql" />
+    <MESSAGE value="Added 02-add-films.sql" />
+    <MESSAGE value="Added 03-create-table-screening.sql" />
+    <MESSAGE value="Added 04-create-seats-table.sql" />
+    <MESSAGE value="Added 05-add-screenings.sql" />
+    <MESSAGE value="Added 06-add-seats.sql" />
+    <MESSAGE value="Project configuration" />
+    <MESSAGE value="Added steps" />
+    <MESSAGE value="Code refactoring" />
+    <MESSAGE value="Added youtube.PNG" />
+    <MESSAGE value="Update screening list in 05-add-screenings.sql" />
+    <MESSAGE value="Added new  microservice architecture schema" />
+    <MESSAGE value="Updated screenings database" />
+    <MESSAGE value="Created akhq-config.yml and added kafka configuration" />
+    <MESSAGE value="Deleted docker-compose.yml for all application" />
+    <MESSAGE value="Deleted appconfig.yml" />
+    <MESSAGE value="Added ytpic.PNG" />
+    <MESSAGE value="Added kafkahq , updated kafka configuration and added all application docker to main docker-compose.yml" />
+    <MESSAGE value="Updated emailSender application.properties" />
+    <MESSAGE value="Updated emailSender configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated emailSender configuration" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CinemaMicroService$All_in_film.ic" NAME="All in film Coverage Results" MODIFIED="1704532111118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CinemaMicroService$FilmServiceTest.ic" NAME="FilmServiceTest Coverage Results" MODIFIED="1704532422038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.service.film.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CinemaMicroService$FilmClientTest.ic" NAME="FilmClientTest Coverage Results" MODIFIED="1704543195037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.screening.screening.client.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CinemaMicroService$KafkaEmailListenerTest.ic" NAME="KafkaEmailListenerTest Coverage Results" MODIFIED="1707220399760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.emailsender.email.*</FILTER>
+    </SUITE>
+  </component>
+</project>

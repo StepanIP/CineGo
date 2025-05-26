@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/film/src/main/resources/filmdatabase/01-create-film-table.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/film/src/main/resources/filmdatabase/02-add-films.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/01-create-table-screening.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/02-create-seats-table.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/03-add-screenings.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/screening/src/main/resources/screeningdatabase/04-add-seats.sql" dialect="GenericSQL" />
+  </component>
+</project>

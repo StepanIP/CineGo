@@ -1,0 +1,27 @@
+package com.service.film.mapper;
+
+import com.service.film.domain.Film;
+import com.service.film.dto.CreatedFilmDto;
+import com.service.film.dto.FilmRequestDto;
+import com.service.film.dto.FilmResponseDto;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
+
+import org.springframework.stereotype.Component;
+
+@Mapper(componentModel = "spring", uses = {GenreMapper.class, ActorMapper.class})
+public interface FilmMapper {
+
+    @Mapping(target = "durationFilmInMinutes", source = "durationMinutes")
+    @Mapping(target = "genres", source = "genres")
+    @Mapping(target = "actors", source = "actors")
+    FilmResponseDto entityToDto(Film film);
+
+    CreatedFilmDto createdEntityToDto(Film film);
+
+    @Mapping(target = "durationMinutes", source = "durationFilmInMinutes")
+    @Mapping(target = "genres", ignore = true)
+    @Mapping(target = "actors", ignore = true)
+    Film dtoToEntity(FilmRequestDto dto);
+}
