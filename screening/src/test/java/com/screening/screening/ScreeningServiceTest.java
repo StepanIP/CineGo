@@ -1,7 +1,12 @@
 package com.screening.screening;
 
-import com.screening.screening.dto.ScreeningRequestDto;
-import com.screening.screening.dto.ScreeningResponseDto;
+import com.screening.domain.model.Screening;
+import com.screening.domain.dto.ScreeningRequestDto;
+import com.screening.domain.dto.ScreeningResponseDto;
+import com.screening.mapper.ScreeningMapper;
+import com.screening.repository.ScreeningRepository;
+import com.screening.service.ScreeningService;
+import com.screening.validator.ScreeningValidate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

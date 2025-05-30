@@ -2,9 +2,11 @@ package com.screening.screening;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.screening.screening.dto.CreatedScreeningDto;
-import com.screening.screening.dto.ScreeningRequestDto;
-import com.screening.screening.dto.ScreeningResponseDto;
+import com.screening.domain.model.Screening;
+import com.screening.domain.dto.CreatedScreeningDto;
+import com.screening.domain.dto.ScreeningRequestDto;
+import com.screening.domain.dto.ScreeningResponseDto;
+import com.screening.service.ScreeningService;
 import com.service.film.domain.Film;
 import com.service.film.domain.FilmCategory;
 import org.junit.jupiter.api.BeforeEach;

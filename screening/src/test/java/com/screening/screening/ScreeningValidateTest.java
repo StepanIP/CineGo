@@ -1,7 +1,10 @@
 package com.screening.screening;
 
-import com.screening.common.exception.exceptions.NotFoundException;
-import com.screening.common.exception.exceptions.TooManyScreeningException;
+import com.screening.exceptions.NotFoundException;
+import com.screening.exceptions.TooManyScreeningException;
+import com.screening.domain.model.Screening;
+import com.screening.repository.ScreeningRepository;
+import com.screening.validator.ScreeningValidate;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

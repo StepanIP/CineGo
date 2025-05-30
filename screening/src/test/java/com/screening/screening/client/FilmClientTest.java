@@ -1,6 +1,7 @@
 package com.screening.screening.client;
 
-import com.screening.screening.dto.Film;
+import com.screening.client.FilmClient;
+import com.screening.domain.dto.Film;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

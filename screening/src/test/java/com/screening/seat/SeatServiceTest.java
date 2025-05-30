@@ -1,9 +1,13 @@
 package com.screening.seat;
 
-import com.screening.common.exception.exceptions.AlreadyTakenException;
-import com.screening.common.exception.exceptions.NotFoundException;
-import com.screening.screening.Screening;
-import com.screening.screening.ScreeningFacade;
+import com.screening.exceptions.AlreadyTakenException;
+import com.screening.exceptions.NotFoundException;
+import com.screening.domain.model.Screening;
+import com.screening.domain.model.Seat;
+import com.screening.domain.model.SeatStatus;
+import com.screening.facade.ScreeningFacade;
+import com.screening.repository.SeatRepository;
+import com.screening.service.SeatService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
