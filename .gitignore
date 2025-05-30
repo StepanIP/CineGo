@@ -1,0 +1,9 @@
+/.idea/
+/.gitignore
+/user/target
+/ticket/target
+/screening/target
+/film/target
+/discovery/target
+/gateway/target
+/config-server/target
