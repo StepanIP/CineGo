@@ -95,6 +95,16 @@ class ScreeningService implements ScreeningFacade {
             .collect(Collectors.toList());
     }
 
+    public List<ScreeningResponseDto> getScreeningsByDateRange(LocalDate startDate, LocalDate endDate) {
+        validate.checkCorrectDateRange(startDate, endDate);
+
+        List<Screening> screenings = repository.findScreeningsByDateBetween(startDate, endDate);
+
+        return screenings.stream()
+            .map(screening -> getScreeningWithFilm(screening.getId()))
+            .collect(Collectors.toList());
+    }
+
     public Screening findById(Long screeningId) {
         Screening screening = repository.findById(screeningId).orElseThrow(() -> new NotFoundException(SCREENING_NOT_FOUND, screeningId));
         log.info("Found screening with id {}", screeningId);

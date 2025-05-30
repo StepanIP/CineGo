@@ -14,5 +14,8 @@ public record FilmResponseDto(
     Double rating,
     String country,
     Integer ageRestriction,
+    String trailerUrl,
+    String coverImage,
+    String titleImage,
     List<ActorResponseDto> actors
 ) {}

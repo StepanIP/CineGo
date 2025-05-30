@@ -21,10 +21,10 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     /**
-     * Регистрация пользователя
+     * Register a new user
      *
-     * @param request данные пользователя
-     * @return токен
+     * @param request user data
+     * @return JWT token
      */
     public JwtAuthenticationResponse signUp(SignUpRequest request) {
 
@@ -42,10 +42,10 @@ public class AuthenticationService {
     }
 
     /**
-     * Аутентификация пользователя
+     * Authenticate user
      *
-     * @param request данные пользователя
-     * @return токен
+     * @param request user credentials
+     * @return JWT token
      */
     public JwtAuthenticationResponse signIn(SignInRequest request) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(

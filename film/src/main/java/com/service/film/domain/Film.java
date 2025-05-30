@@ -42,6 +42,12 @@ public class Film {
 
     private Integer ageRestriction;
 
+    private String trailerUrl;
+
+    private String coverImage;
+
+    private String titleImage;
+
     @ManyToMany
     @JoinTable(
         name = "film_actor",

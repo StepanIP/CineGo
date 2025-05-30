@@ -6,11 +6,7 @@ import com.service.film.dto.CreatedFilmDto;
 import com.service.film.dto.FilmResponseDto;
 import com.service.film.dto.FilmRequestDto;
 import lombok.RequiredArgsConstructor;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -21,32 +17,29 @@ public class FilmController {
     private final FilmService filmService;
 
     @PostMapping
-    public ResponseEntity<CreatedFilmDto> saveFilm(@RequestBody FilmRequestDto filmRequestDto) {
-        CreatedFilmDto createdFilm = filmService.saveFilm(filmRequestDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdFilm);
+    @ResponseStatus(code = org.springframework.http.HttpStatus.CREATED)
+    public CreatedFilmDto saveFilm(@RequestBody FilmRequestDto filmRequestDto) {
+        return filmService.saveFilm(filmRequestDto);
     }
 
     @GetMapping
-    public ResponseEntity<List<FilmResponseDto>> findAll() {
-        List<FilmResponseDto> allFilms = filmService.findAllFilms();
-        return ResponseEntity.ok(allFilms);
+    public List<FilmResponseDto> findAll() {
+        return filmService.findAllFilms();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FilmResponseDto> findById(@PathVariable Long id) {
-        FilmResponseDto filmResponseDto = filmService.findFilmById(id);
-        return ResponseEntity.ok(filmResponseDto);
+    public FilmResponseDto findById(@PathVariable Long id) {
+        return filmService.findFilmById(id);
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<FilmResponseDto>> getFilmsByGenre(@RequestParam("genre") String genreName) {
-        List<FilmResponseDto> films = filmService.findFilmsByGenreName(genreName);
-        return ResponseEntity.ok(films);
+    public List<FilmResponseDto> getFilmsByGenre(@RequestParam("genre") String genreName) {
+        return filmService.findFilmsByGenreName(genreName);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFilm(@PathVariable Long id) {
+    @ResponseStatus(code = org.springframework.http.HttpStatus.NO_CONTENT)
+    public void deleteFilm(@PathVariable Long id) {
         filmService.deleteFilm(id);
-        return ResponseEntity.noContent().build();
     }
 }

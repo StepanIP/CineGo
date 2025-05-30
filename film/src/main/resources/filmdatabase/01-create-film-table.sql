@@ -8,7 +8,10 @@ CREATE TABLE IF NOT EXISTS film
     director         VARCHAR(255),
     rating           NUMERIC(3,2),
     country          VARCHAR(255),
-    age_restriction  INTEGER
+    age_restriction  INTEGER,
+    trailer_url      VARCHAR(255),
+    cover_image      VARCHAR(255),
+    title_image      VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS actor
@@ -16,7 +19,8 @@ CREATE TABLE IF NOT EXISTS actor
     id         SERIAL PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name  VARCHAR(100) NOT NULL,
-    birth_date DATE
+    birth_date DATE,
+    photo      VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS film_actor

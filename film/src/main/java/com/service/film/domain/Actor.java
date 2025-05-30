@@ -24,6 +24,8 @@ public class Actor {
 
     private LocalDate birthDate;
 
+    private String photo;
+
     @ManyToMany(mappedBy = "actors")
     private List<Film> films = new ArrayList<>();
 }

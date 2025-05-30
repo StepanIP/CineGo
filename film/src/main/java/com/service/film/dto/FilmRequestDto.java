@@ -13,5 +13,8 @@ public record FilmRequestDto(
     Double rating,
     String country,
     Integer ageRestriction,
+    String trailerUrl,
+    String coverImage,
+    String titleImage,
     List<Long> actorIds            // передаємо id акторів
 ) {}

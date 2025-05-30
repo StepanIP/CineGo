@@ -39,6 +39,7 @@ public class ActorService {
         actor.setFirstName(updatedActor.getFirstName());
         actor.setLastName(updatedActor.getLastName());
         actor.setBirthDate(updatedActor.getBirthDate());
+        actor.setPhoto(updatedActor.getPhoto());
         return actorRepository.save(actor);
     }
 

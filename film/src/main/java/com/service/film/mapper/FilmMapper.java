@@ -16,6 +16,9 @@ public interface FilmMapper {
     @Mapping(target = "durationFilmInMinutes", source = "durationMinutes")
     @Mapping(target = "genres", source = "genres")
     @Mapping(target = "actors", source = "actors")
+    @Mapping(target = "trailerUrl", source = "trailerUrl")
+    @Mapping(target = "coverImage", source = "coverImage")
+    @Mapping(target = "titleImage", source = "titleImage")
     FilmResponseDto entityToDto(Film film);
 
     CreatedFilmDto createdEntityToDto(Film film);
@@ -23,5 +26,8 @@ public interface FilmMapper {
     @Mapping(target = "durationMinutes", source = "durationFilmInMinutes")
     @Mapping(target = "genres", ignore = true)
     @Mapping(target = "actors", ignore = true)
+    @Mapping(target = "trailerUrl", source = "trailerUrl")
+    @Mapping(target = "coverImage", source = "coverImage")
+    @Mapping(target = "titleImage", source = "titleImage")
     Film dtoToEntity(FilmRequestDto dto);
 }

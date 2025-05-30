@@ -16,57 +16,47 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api/v1/screenings")
 public class ScreeningController {
 
     private final ScreeningService service;
 
-    @GetMapping(ROOT)
-    public ResponseEntity<List<ScreeningResponseDto>> getScreeningsByDate(
+    @GetMapping
+    public List<ScreeningResponseDto> getScreeningsByDate(
         @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-        List<ScreeningResponseDto> screenings = service.getScreeningsByDate(date);
-        return ResponseEntity.status(HttpStatus.OK).body(screenings);
-
+        return service.getScreeningsByDate(date);
     }
 
-    @PostMapping(SAVE)
-    public ResponseEntity<CreatedScreeningDto> saveScreening(@RequestBody ScreeningRequestDto screeningDto, @PathVariable Long filmId) {
-        return new ResponseEntity<>(service.saveScreening(screeningDto, filmId), HttpStatus.CREATED);
+    @GetMapping("/range")
+    public List<ScreeningResponseDto> getScreeningsByDateRange(
+        @RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
+        @RequestParam("endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
+        return service.getScreeningsByDateRange(startDate, endDate);
     }
 
-    @GetMapping(FIND_SCREENING)
+    @PostMapping("/{filmId}")
+    @ResponseStatus(code = org.springframework.http.HttpStatus.CREATED)
+    public CreatedScreeningDto saveScreening(@RequestBody ScreeningRequestDto screeningDto, @PathVariable Long filmId) {
+        return service.saveScreening(screeningDto, filmId);
+    }
+
+    @GetMapping("/{screeningId}")
     public ScreeningResponseDto findScreeningById(@PathVariable Long screeningId) {
         return service.getScreeningWithFilm(screeningId);
     }
 
-    @GetMapping(FIND_AVAILABLE_SEATS)
-    public ResponseEntity<ScreeningAvailableSeats> findAvailableSeats(@PathVariable Long id) {
-        ScreeningAvailableSeats screeningAvailableSeats = service.findAvailableSeats(id);
-        return ResponseEntity.status(HttpStatus.OK).body(screeningAvailableSeats);
+    @GetMapping("/seats/{id}")
+    public ScreeningAvailableSeats findAvailableSeats(@PathVariable Long id) {
+        return service.findAvailableSeats(id);
     }
 
-    @PutMapping(BOOKING_SEATS)
+    @PutMapping("/booking/seats/{screeningId}/{rowNumber}/{seatsNumber}")
     public void bookingSets(@PathVariable Long screeningId, @PathVariable int rowNumber, @PathVariable int seatsNumber) {
         service.bookingSets(screeningId, rowNumber, seatsNumber);
     }
 
-    @GetMapping("/api/v1/screenings/cinemaId")
-    public ResponseEntity<List<ScreeningResponseDto>> getScreeningsByCinemaId(@RequestParam("cinemaId") Long cinemaId) {
-        List<ScreeningResponseDto> screenings = service.getScreeningsByCinemaId(cinemaId);
-        return ResponseEntity.status(HttpStatus.OK).body(screenings);
+    @GetMapping("/cinemaId")
+    public List<ScreeningResponseDto> getScreeningsByCinemaId(@RequestParam("cinemaId") Long cinemaId) {
+        return service.getScreeningsByCinemaId(cinemaId);
     }
-
-    static final class Routes {
-
-        static final String ROOT = "/api/v1/screenings";
-
-        static final String SAVE = ROOT + "/{filmId}";
-
-        static final String FIND_SCREENING = ROOT + "/{screeningId}";
-
-        static final String FIND_AVAILABLE_SEATS = ROOT + "/seats/{id}";
-
-        static final String BOOKING_SEATS = ROOT + "/booking/seats/{screeningId}/{rowNumber}/{seatsNumber}";
-
-    }
-
 }

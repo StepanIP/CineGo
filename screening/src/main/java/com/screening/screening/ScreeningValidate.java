@@ -1,5 +1,6 @@
 package com.screening.screening;
 
+import com.screening.common.exception.exceptions.InvalidDateRangeException;
 import com.screening.common.exception.exceptions.NotFoundException;
 import com.screening.common.exception.exceptions.TimeDifferenceException;
 import com.screening.common.exception.exceptions.TooLateException;
@@ -28,6 +29,18 @@ class ScreeningValidate {
         if (!repository.existsByDate(date)) {
             throw new NotFoundException(NOT_FOUND_BY_DATE, date);
         }
+    }
+
+    public void checkCorrectDateRange(LocalDate startDate, LocalDate endDate) {
+        if (startDate.isAfter(endDate)) {
+            throw new InvalidDateRangeException(INVALID_DATE_RANGE);
+        }
+        
+        if (!repository.findScreeningsByDateBetween(startDate, endDate).isEmpty()) {
+            return;
+        }
+        
+        throw new NotFoundException(NOT_FOUND_BY_DATE_RANGE, startDate, endDate);
     }
 
     public void checkCorrectTime(ScreeningRequestDto newScreening) {
@@ -77,6 +90,10 @@ class ScreeningValidate {
         static final String TOO_LATE_TO_CREATE = "It isn't possible to create new screening earlier than the current time";
 
         static final String NOT_FOUND_BY_DATE = "Screening with date %s not found";
+
+        static final String NOT_FOUND_BY_DATE_RANGE = "No screenings found between dates %s and %s";
+
+        static final String INVALID_DATE_RANGE = "Start date cannot be after end date";
 
         static final String TOO_MANY_SCREENINGS = "It is impossible to add another screening because there are already five";
 
