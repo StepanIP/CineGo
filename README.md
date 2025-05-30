@@ -17,11 +17,11 @@ which includes all the details along with a unique QR code for confirming the pu
 
 The application is integrated with the National Bank of Poland's API, allowing customers to choose from 34 currencies for the ticket price. The application sends a periodic request to the API NBP every 24 hours, ensuring the database is updated with the latest currency values.
 
-User have the authority to add new films to the database and create new screenings, specifying the date, time, and film. 
+com.user.user.model.User have the authority to add new films to the database and create new screenings, specifying the date, time, and film. 
 
 Apache Kafka:
 
-* The User and Ticket microservices are integrated with Apache Kafka, which sends messages to the EmailSender application.
+* The com.user.user.model.User and Ticket microservices are integrated with Apache Kafka, which sends messages to the EmailSender application.
 * Kafka is responsible for passing the data needed to send the confirmation email.
 * When a user completes the ticket reservation process, the reservation microservice publishes a message to Kafka with details of the ticket purchased.
 * The microservice responsible for generating and sending PDF tickets consumes this message, generates a ticket and then sends it to the user.
