@@ -1,51 +1,37 @@
 package com.ticket.ticketingSystem.ticketPriceCalculator;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.List;
+
 import com.ticket.common.dto.ExchangeRate;
 import com.ticket.common.dto.ScreeningDto;
 import com.ticket.common.dto.TicketBookingDto;
-import com.ticket.common.enums.TicketType;
 import com.ticket.feignClient.CurrenciesClient;
 import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Component;
 
-import java.math.RoundingMode;
-import java.math.BigDecimal;
-import java.time.DayOfWeek;
-
-import static com.ticket.ticketingSystem.ticketPriceCalculator.TicketPrice.*;
+import static com.ticket.ticketingSystem.ticketPriceCalculator.TicketPrice.BASIC_TICKET_PRICE;
 
 @Component
 @AllArgsConstructor
-
 public class TicketPriceCalculator {
 
     private final CurrenciesClient currenciesClient;
+    private final List<DiscountStrategy> discountStrategies;
 
-    public int eventDiscount(ScreeningDto screening) {
-        DayOfWeek dayOfWeek = screening.date().getDayOfWeek();
+    public BigDecimal finalPrice(TicketBookingDto ticket, ScreeningDto screening) {
+        ExchangeRate exchangeRate = currenciesClient.findCode(ticket.currency().toString());
 
-        if (dayOfWeek == DayOfWeek.FRIDAY || dayOfWeek == DayOfWeek.TUESDAY) {
-            return TICKET_PRICE_WITH_EVENT_REDUCE;
-        } else {
-            return BASIC_TICKET_PRICE;
+        BigDecimal price = BigDecimal.valueOf(BASIC_TICKET_PRICE);
+
+        for (DiscountStrategy strategy : discountStrategies) {
+            price = strategy.apply(price, ticket, screening);
         }
+
+        return price
+            .divide(BigDecimal.valueOf(exchangeRate.rate()), 1, RoundingMode.HALF_UP)
+            .max(BigDecimal.ZERO);
     }
-
-    public int discountForStudents(TicketBookingDto requestDto, ScreeningDto screening) {
-        if (requestDto.ticketType() == TicketType.REDUCE) {
-            return eventDiscount(screening) - STUDENT_REDUCE;
-        } else {
-            return eventDiscount(screening);
-        }
-    }
-
-    public BigDecimal finalPrice(TicketBookingDto ticketBookingDto, ScreeningDto screening) {
-        ExchangeRate exchangeRate = currenciesClient.findCode(ticketBookingDto.currency().toString());
-        double price = (discountForStudents(ticketBookingDto, screening) / exchangeRate.rate());
-
-        BigDecimal result = BigDecimal.valueOf(price);
-        return result.setScale(1, RoundingMode.HALF_UP);
-    }
-
 }

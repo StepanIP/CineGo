@@ -6,6 +6,7 @@ import com.ticket.common.dto.EmailWithTicket;
 import com.ticket.common.dto.TicketDto;
 import com.ticket.common.enums.Currency;
 import com.ticket.common.enums.TicketType;
+import com.ticket.ticketingSystem.kafka.KafkaProducer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

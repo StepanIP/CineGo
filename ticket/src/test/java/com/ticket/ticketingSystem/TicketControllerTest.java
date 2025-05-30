@@ -7,6 +7,8 @@ import com.ticket.common.dto.TicketBookedDto;
 import com.ticket.common.dto.TicketBookingDto;
 import com.ticket.common.enums.Currency;
 import com.ticket.common.enums.TicketType;
+import com.ticket.ticketingSystem.model.Ticket;
+import com.ticket.ticketingSystem.service.TicketService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -16,14 +16,20 @@ spring:
           uri: http://localhost:8070
           predicates:
             - Path=/api/v1/films/**, /api/v1/actors/**, /api/v1/genres/**
+          filters:
+            - AuthenticationFilter
         - id: screenings
           uri: http://localhost:8060
           predicates:
             - Path=/api/v1/screenings/**
+          filters:
+            - AuthenticationFilter
         - id: currencies
           uri: http://localhost:8000
           predicates:
               - Path=/api/v1/codes/**
+          filters:
+            - AuthenticationFilter
         - id: users
           uri: http://localhost:8090
           predicates:
@@ -32,14 +38,14 @@ spring:
           uri: http://localhost:8022
           predicates:
             - Path=/api/v1/send/**
+          filters:
+            - AuthenticationFilter
         - id: tickets
           uri: http://localhost:9010
           predicates:
             - Path=/api/v1/book/**
-        - id: currencies
-          uri: http://localhost:8000
-          predicates:
-            - Path=/api/v1/codes/**
+          filters:
+            - AuthenticationFilter
 management:
   tracing:
     sampling:
