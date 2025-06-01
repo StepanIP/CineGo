@@ -9,14 +9,14 @@ import com.screening.domain.dto.ScreeningAvailableSeats;
 import com.screening.domain.dto.ScreeningRequestDto;
 import com.screening.domain.dto.ScreeningResponseDto;
 import com.screening.facade.ScreeningFacade;
-import com.screening.screening.ScreeningMapper;
+import com.screening.mapper.ScreeningMapper;
 import com.screening.repository.ScreeningRepository;
-import com.screening.screening.ScreeningValidate;
 import com.screening.client.FilmClient;
 import com.screening.exceptions.NotFoundException;
 import com.screening.domain.model.Seat;
 import com.screening.facade.SeatFacade;
 import com.screening.domain.model.SeatStatus;
+import com.screening.validator.ScreeningValidate;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -34,7 +34,7 @@ import java.util.stream.IntStream;
 @Service
 @AllArgsConstructor
 @Log4j2
-class ScreeningService implements ScreeningFacade {
+public class ScreeningService implements ScreeningFacade {
 
     private final ScreeningRepository repository;
 

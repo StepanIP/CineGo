@@ -20,7 +20,7 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
-class ScreeningValidate {
+public class ScreeningValidate {
 
     private final ScreeningRepository repository;
 

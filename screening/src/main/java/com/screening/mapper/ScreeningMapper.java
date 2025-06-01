@@ -9,7 +9,7 @@ import org.mapstruct.Mapping;
 
 
 @Mapper(componentModel = "spring")
-interface ScreeningMapper {
+public interface ScreeningMapper {
 
     Screening dtoToEntity(ScreeningRequestDto screeningRequestDto);
 

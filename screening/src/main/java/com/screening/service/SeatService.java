@@ -19,7 +19,7 @@ import static com.screening.service.SeatService.ErrorMessages.*;
 @Service
 @AllArgsConstructor
 @Log4j2
-class SeatService implements SeatFacade {
+public class SeatService implements SeatFacade {
 
     private final ScreeningFacade screeningFacade;
 

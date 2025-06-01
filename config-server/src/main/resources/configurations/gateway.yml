@@ -33,7 +33,9 @@ spring:
         - id: users
           uri: http://localhost:8090
           predicates:
-            - Path=/api/v1/users/**
+            - Path=/api/v1/users/**, /api/v1/auth/**
+          filters:
+            - AuthenticationFilter
         - id: emailSender
           uri: http://localhost:8022
           predicates:

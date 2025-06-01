@@ -1,7 +1,7 @@
 package com.screening.config;
 
 import com.screening.facade.ScreeningFacade;
-import com.screening.screening.ScreeningService;
+import com.screening.service.ScreeningService;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -4,13 +4,11 @@ import com.screening.domain.dto.CreatedScreeningDto;
 import com.screening.domain.dto.ScreeningAvailableSeats;
 import com.screening.domain.dto.ScreeningRequestDto;
 import com.screening.domain.dto.ScreeningResponseDto;
-import com.screening.screening.ScreeningService;
+import com.screening.service.ScreeningService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
-
-import static com.screening.cotroller.ScreeningController.Routes.*;
 
 import java.time.LocalDate;
 import java.util.List;

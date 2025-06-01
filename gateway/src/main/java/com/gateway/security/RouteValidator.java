@@ -13,6 +13,8 @@ public class RouteValidator {
             "/api/v1/films",
             "/api/v1/actors",
             "/api/v1/genres",
+            "/api/v1/users/sign-up",
+            "/api/v1/users/sign-in",
             "/eureka"
     );
 
