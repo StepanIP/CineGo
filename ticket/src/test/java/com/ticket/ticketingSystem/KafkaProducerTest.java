@@ -2,10 +2,10 @@ package com.ticket.ticketingSystem;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ticket.common.dto.EmailWithTicket;
-import com.ticket.common.dto.TicketDto;
-import com.ticket.common.enums.Currency;
-import com.ticket.common.enums.TicketType;
+import com.ticket.ticketingSystem.dto.EmailWithTicket;
+import com.ticket.ticketingSystem.dto.TicketDto;
+import com.ticket.ticketingSystem.model.enums.Currency;
+import com.ticket.ticketingSystem.model.enums.TicketType;
 import com.ticket.ticketingSystem.kafka.KafkaProducer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

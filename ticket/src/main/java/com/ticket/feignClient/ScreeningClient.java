@@ -1,6 +1,6 @@
 package com.ticket.feignClient;
 
-import com.ticket.common.dto.ScreeningDto;
+import com.ticket.ticketingSystem.dto.ScreeningDto;
 
 import org.springframework.cloud.openfeign.FeignClient;
 

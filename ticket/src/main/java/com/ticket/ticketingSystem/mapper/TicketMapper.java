@@ -1,7 +1,7 @@
 package com.ticket.ticketingSystem.mapper;
 
-import com.ticket.common.dto.TicketBookedDto;
-import com.ticket.common.dto.TicketDto;
+import com.ticket.ticketingSystem.dto.TicketBookedDto;
+import com.ticket.ticketingSystem.dto.TicketDto;
 import com.ticket.ticketingSystem.model.Ticket;
 import org.mapstruct.Mapper;
 

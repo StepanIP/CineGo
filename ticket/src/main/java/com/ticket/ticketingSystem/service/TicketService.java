@@ -1,11 +1,15 @@
 package com.ticket.ticketingSystem.service;
 
-import com.ticket.common.dto.*;
-import com.ticket.common.exception.exceptions.NotFoundException;
+import com.ticket.ticketingSystem.exceptions.exception.NotFoundException;
 import com.ticket.feignClient.ScreeningClient;
 import com.ticket.feignClient.UserClient;
-import com.ticket.common.exception.exceptions.TooLateToBookException;
+import com.ticket.ticketingSystem.exceptions.exception.TooLateToBookException;
 
+import com.ticket.ticketingSystem.dto.EmailWithTicket;
+import com.ticket.ticketingSystem.dto.ScreeningDto;
+import com.ticket.ticketingSystem.dto.TicketBookedDto;
+import com.ticket.ticketingSystem.dto.TicketBookingDto;
+import com.ticket.ticketingSystem.dto.UserResponseDto;
 import com.ticket.ticketingSystem.mapper.TicketMapper;
 import com.ticket.ticketingSystem.repository.TicketRepository;
 import com.ticket.ticketingSystem.kafka.KafkaProducer;
@@ -17,7 +21,7 @@ import lombok.extern.log4j.Log4j2;
 
 import org.springframework.stereotype.Service;
 
-import com.ticket.common.enums.TicketStatus;
+import com.ticket.ticketingSystem.model.enums.TicketStatus;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

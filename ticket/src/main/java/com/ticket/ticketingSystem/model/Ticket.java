@@ -1,8 +1,8 @@
 package com.ticket.ticketingSystem.model;
 
-import com.ticket.common.enums.Currency;
-import com.ticket.common.enums.TicketStatus;
-import com.ticket.common.enums.TicketType;
+import com.ticket.ticketingSystem.model.enums.Currency;
+import com.ticket.ticketingSystem.model.enums.TicketStatus;
+import com.ticket.ticketingSystem.model.enums.TicketType;
 import jakarta.persistence.*;
 import lombok.*;
 

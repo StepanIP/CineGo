@@ -1,6 +1,6 @@
 package com.ticket.feignClient;
 
-import com.ticket.common.dto.UserResponseDto;
+import com.ticket.ticketingSystem.dto.UserResponseDto;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

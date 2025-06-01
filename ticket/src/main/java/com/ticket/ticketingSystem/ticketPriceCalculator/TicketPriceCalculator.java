@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
-import com.ticket.common.dto.ExchangeRate;
-import com.ticket.common.dto.ScreeningDto;
-import com.ticket.common.dto.TicketBookingDto;
+import com.ticket.ticketingSystem.dto.ExchangeRate;
+import com.ticket.ticketingSystem.dto.ScreeningDto;
+import com.ticket.ticketingSystem.dto.TicketBookingDto;
 import com.ticket.feignClient.CurrenciesClient;
 import lombok.AllArgsConstructor;
 

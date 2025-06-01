@@ -2,9 +2,9 @@ package com.ticket.ticketingSystem.ticketPriceCalculator;
 
 import java.math.BigDecimal;
 
-import com.ticket.common.dto.ScreeningDto;
-import com.ticket.common.dto.TicketBookingDto;
-import com.ticket.common.enums.TicketType;
+import com.ticket.ticketingSystem.dto.ScreeningDto;
+import com.ticket.ticketingSystem.dto.TicketBookingDto;
+import com.ticket.ticketingSystem.model.enums.TicketType;
 
 import org.springframework.stereotype.Component;
 

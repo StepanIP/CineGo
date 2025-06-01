@@ -1,7 +1,7 @@
 package com.ticket.ticketingSystem.controller;
 
-import com.ticket.common.dto.TicketBookedDto;
-import com.ticket.common.dto.TicketBookingDto;
+import com.ticket.ticketingSystem.dto.TicketBookedDto;
+import com.ticket.ticketingSystem.dto.TicketBookingDto;
 import com.ticket.ticketingSystem.service.TicketService;
 import lombok.RequiredArgsConstructor;
 

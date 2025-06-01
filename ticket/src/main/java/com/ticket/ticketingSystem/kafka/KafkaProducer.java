@@ -2,7 +2,7 @@ package com.ticket.ticketingSystem.kafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ticket.common.dto.EmailWithTicket;
+import com.ticket.ticketingSystem.dto.EmailWithTicket;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 

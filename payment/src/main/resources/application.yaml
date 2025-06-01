@@ -1,0 +1,13 @@
+paypal:
+  client-id: ${PAYPAL_CLIENT_ID}
+  client-secret: ${PAYPAL_CLIENT_SECRET}
+  mode: sandbox #sandbox for testing, live for production
+  redirect-url:
+    success: http://localhost:8222/payment/success
+    cancel: http://localhost:8222/payment/cancel
+    error: http://localhost:8222/payment/error
+spring:
+  application:
+    name: payment
+  config:
+    import: optional:configserver:http://localhost:8888

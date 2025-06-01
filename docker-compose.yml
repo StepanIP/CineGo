@@ -84,6 +84,18 @@ services:
     volumes:
       - tickets-data:/var/lib/postgresql/data
 
+  paymentDB:
+    image: postgres
+    container_name: payments
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: payments
+    ports:
+      - "5454:5432"
+    volumes:
+      - payment-data:/var/lib/postgresql/data
+
   filmDB:
     image: postgres
     container_name: film

@@ -1,7 +1,7 @@
 package com.ticket.ticketingSystem.ticketPriceCalculator;
 
-import com.ticket.common.dto.ScreeningDto;
-import com.ticket.common.dto.TicketBookingDto;
+import com.ticket.ticketingSystem.dto.ScreeningDto;
+import com.ticket.ticketingSystem.dto.TicketBookingDto;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
