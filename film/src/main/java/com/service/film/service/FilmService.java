@@ -25,7 +25,9 @@ import java.util.stream.Collectors;
 public class FilmService {
 
     private final FilmRepository repository;
+
     private final FilmMapper mapper;
+
     private final GenreRepository genreRepository;
 
     @Transactional

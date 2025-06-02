@@ -36,7 +36,8 @@ public class Film {
     )
     private List<Genre> genres = new ArrayList<>();
 
-    private Double rating;
+    @Column(nullable = false)
+    private Double rating = 0.0;
 
     private String country;
 
@@ -55,5 +56,8 @@ public class Film {
         inverseJoinColumns = @JoinColumn(name = "actor_id")
     )
     private List<Actor> actors = new ArrayList<>();
+
+    @OneToMany(mappedBy = "film", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
 }
 

@@ -53,6 +53,11 @@ public class SeatService implements SeatFacade {
         return seat;
     }
 
+    public Seat findById(Long id) {
+        return seatRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Seat not found with ID: " + id));
+    }
+
     static final class ErrorMessages {
 
         static final String NOT_FOUND_SEAT = "Seat not found for provided row %d and seat number %d.";

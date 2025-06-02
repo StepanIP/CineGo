@@ -22,7 +22,6 @@ public class PaymentFacade {
         Payment payment = paymentService.createAndRedirect(dto);
         for (com.paypal.api.payments.Links link : payment.getLinks()) {
             if ("approval_url".equals(link.getRel())) {
-                System.out.println("Redirect to PayPal for approval: " + link.getHref());
                 return new RedirectView(link.getHref());
             }
         }

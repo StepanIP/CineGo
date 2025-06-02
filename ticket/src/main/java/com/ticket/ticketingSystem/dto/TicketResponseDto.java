@@ -1,26 +1,18 @@
-package com.ticket.ticketingSystem.model;
+package com.ticket.ticketingSystem.dto;
 
 import com.ticket.ticketingSystem.model.enums.Currency;
 import com.ticket.ticketingSystem.model.enums.TicketStatus;
-import com.ticket.ticketingSystem.model.enums.TicketType;
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity
-@Table(name = "ticket")
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
-public class Ticket {
+public class TicketResponseDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -39,14 +31,10 @@ public class Ticket {
 
     private int roomNumber;
 
-    private Long userId;
-
-    @Enumerated(EnumType.STRING)
     private TicketStatus status;
 
     private double price;
 
-    @Enumerated(value = EnumType.STRING)
     private Currency currency;
 
 }

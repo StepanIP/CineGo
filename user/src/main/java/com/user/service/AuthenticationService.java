@@ -32,13 +32,15 @@ public class AuthenticationService {
      * @return JWT token
      */
     public JwtAuthenticationResponse signUp(SignUpRequest request) {
-
         var user = User.builder()
             .username(request.getUsername())
             .email(request.getEmail())
             .password(passwordEncoder.encode(request.getPassword()))
             .role(Role.ROLE_USER)
+            .birthDate(request.getBirthDate())
             .build();
+
+        user.setStudent(userService.isStudent(user));
 
         userService.create(user);
 

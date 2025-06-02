@@ -12,4 +12,3 @@ public interface UserClient {
     @GetMapping("{id}")
     UserResponseDto findUserById(@PathVariable("id") Long id);
 }
-

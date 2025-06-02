@@ -10,5 +10,6 @@ public record UserDto(
     String username,
     String email,
     String role,
-    LocalDate birthDate
+    LocalDate birthDate,
+    boolean isStudent
 ) {}

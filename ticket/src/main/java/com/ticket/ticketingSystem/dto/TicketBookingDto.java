@@ -1,9 +1,8 @@
 package com.ticket.ticketingSystem.dto;
 
 import com.ticket.ticketingSystem.model.enums.Currency;
-import com.ticket.ticketingSystem.model.enums.TicketType;
 
-public record TicketBookingDto(TicketType ticketType,
+public record TicketBookingDto(double price,
                                Currency currency,
                                int rowsNumber,
                                int seatInRow) {

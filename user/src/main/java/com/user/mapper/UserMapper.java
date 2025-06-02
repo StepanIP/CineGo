@@ -14,6 +14,16 @@ public class UserMapper {
             .username(user.getUsername())
             .email(user.getEmail())
             .role(user.getRole().name())
+            .birthDate(user.getBirthDate())
+            .build();
+    }
+
+    public User toEntity(UserDto userDto) {
+        return User.builder()
+            .id(userDto.id())
+            .username(userDto.username())
+            .email(userDto.email())
+            .birthDate(userDto.birthDate())
             .build();
     }
 }

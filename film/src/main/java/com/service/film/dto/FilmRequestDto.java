@@ -6,15 +6,14 @@ import java.util.List;
 public record FilmRequestDto(
     String title,
     String description,
-    List<Long> genreIds,           // передаємо id жанрів
+    List<Long> genreIds,
     int durationFilmInMinutes,
     LocalDate releaseDate,
     String director,
-    Double rating,
     String country,
     Integer ageRestriction,
     String trailerUrl,
     String coverImage,
     String titleImage,
-    List<Long> actorIds            // передаємо id акторів
+    List<Long> actorIds
 ) {}

@@ -1,7 +1,10 @@
 package com.screening.service;
 
 import com.screening.domain.dto.CinemaDto;
+import com.screening.domain.dto.DiscountRequest;
+import com.screening.domain.dto.DiscountResponse;
 import com.screening.domain.dto.FilmRequest;
+import com.screening.domain.dto.UserRequest;
 import com.screening.mapper.CinemaMapper;
 import com.screening.domain.model.Screening;
 import com.screening.domain.dto.CreatedScreeningDto;
@@ -143,10 +146,14 @@ public class ScreeningService implements ScreeningFacade {
 
     }
 
+    public DiscountResponse getDiscount(DiscountRequest discountRequest) {
+
+
+        return null;
+    }
+
     static final class ErrorMessages {
-
         static final String SCREENING_NOT_FOUND = "The screening with id %s not found";
-
     }
 
 }

@@ -26,6 +26,7 @@ public interface FilmMapper {
     @Mapping(target = "durationMinutes", source = "durationFilmInMinutes")
     @Mapping(target = "genres", ignore = true)
     @Mapping(target = "actors", ignore = true)
+    @Mapping(target = "rating", constant = "0.0")
     @Mapping(target = "trailerUrl", source = "trailerUrl")
     @Mapping(target = "coverImage", source = "coverImage")
     @Mapping(target = "titleImage", source = "titleImage")

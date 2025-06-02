@@ -5,7 +5,11 @@ import com.ticket.ticketingSystem.model.enums.TicketStatus;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public record TicketBookedDto(String filmTitle, LocalDate screeningDate,
-                              LocalTime screeningTime, int rowsNumber,
-                              int seatInRow, TicketStatus status) {
+public record TicketBookedDto(
+    String filmTitle,
+    LocalDate screeningDate,
+    LocalTime screeningTime,
+    int rowsNumber,
+    int seatInRow,
+    TicketStatus status) {
 }

@@ -4,6 +4,7 @@ import com.user.domain.model.Role;
 import com.user.domain.model.User;
 import com.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -84,5 +85,31 @@ public class UserService {
         var user = getCurrentUser();
         user.setRole(Role.ROLE_ADMIN);
         save(user);
+    }
+
+    public User getById(Long id) {
+        return repository.findById(id)
+            .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
+
+    public void deleteById(Long id) {
+        if (!repository.existsById(id)) {
+            throw new UsernameNotFoundException("User not found");
+        }
+        repository.deleteById(id);
+    }
+
+    public User update(Long id, User user) {
+        if (!repository.existsById(id)) {
+            throw new UsernameNotFoundException("User not found");
+        }
+
+        user.setId(id);
+        return save(user);
+    }
+
+    public boolean isStudent(User user) {
+        return user.getEmail().endsWith("edu.ua");
+
     }
 }

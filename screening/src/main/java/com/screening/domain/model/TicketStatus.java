@@ -1,4 +1,4 @@
-package com.ticket.ticketingSystem.model.enums;
+package com.screening.domain.model;
 
 public enum TicketStatus {
     ACTIVE,
