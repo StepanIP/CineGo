@@ -146,4 +146,5 @@ volumes:
   screening-data:
   users-data:
   currencies-data:
+  payment-data:
 

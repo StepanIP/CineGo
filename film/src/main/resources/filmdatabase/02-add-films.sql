@@ -1,24 +1,214 @@
-INSERT INTO actor (first_name, last_name, birth_date)
-VALUES ('Robert', 'Downey Jr.', '1965-04-04'),
-       ('Scarlett', 'Johansson', '1984-11-22'),
-       ('Chris', 'Evans', '1981-06-13'),
-       ('Jennifer', 'Lawrence', '1990-08-15'),
-       ('Leonardo', 'DiCaprio', '1974-11-11'),
-       ('Natalie', 'Portman', '1981-06-09'),
-       ('Morgan', 'Freeman', '1937-06-01'),
-       ('Meryl', 'Streep', '1949-06-22'),
-       ('Tom', 'Hanks', '1956-07-09'),
-       ('Emma', 'Stone', '1988-11-06'),
-       ('Brad', 'Pitt', '1963-12-18'),
-       ('Angelina', 'Jolie', '1975-06-04'),
-       ('Denzel', 'Washington', '1954-12-28'),
-       ('Anne', 'Hathaway', '1982-11-12'),
-       ('Hugh', 'Jackman', '1968-10-12'),
-       ('Gal', 'Gadot', '1985-04-30'),
-       ('Ryan', 'Gosling', '1980-11-12'),
-       ('Zendaya', 'Coleman', '1996-09-01'),
-       ('Samuel', 'Jackson', '1948-12-21'),
-       ('Cate', 'Blanchett', '1969-05-14');
+-- Фільми з URL-ами зображень
+INSERT INTO film (
+    title, description, duration_minutes, release_date,
+    director, rating, country, age_restriction,
+    trailer_url, cover_image, title_image
+) VALUES
+      (
+          'Inception',
+          'A thief who steals corporate secrets through the use of dream-sharing technology.',
+          148, '2010-07-16',
+          'Christopher Nolan', 8.8, 'USA', 13,
+          'https://example.com/trailers/inception.mp4',
+          'https://example.com/images/inception-cover.jpg',
+          'https://example.com/images/inception-title.jpg'
+      ),
+      (
+          'The Dark Knight',
+          'Batman battles the Joker in Gotham City.',
+          152, '2008-07-18',
+          'Christopher Nolan', 9.0, 'USA', 13,
+          'https://example.com/trailers/dark-knight.mp4',
+          'https://example.com/images/dark-knight-cover.jpg',
+          'https://example.com/images/dark-knight-title.jpg'
+      ),
+      (
+          'Forrest Gump',
+          'Life story of Forrest Gump, a slow-witted but kind-hearted man.',
+          142, '1994-07-06',
+          'Robert Zemeckis', 8.8, 'USA', 13,
+          'https://example.com/trailers/forrest-gump.mp4',
+          'https://example.com/images/forrest-gump-cover.jpg',
+          'https://example.com/images/forrest-gump-title.jpg'
+      ),
+      (
+          'Titanic',
+          'A romance unfolds aboard the doomed Titanic.',
+          195, '1997-12-19',
+          'James Cameron', 7.8, 'USA', 13,
+          'https://example.com/trailers/titanic.mp4',
+          'https://example.com/images/titanic-cover.jpg',
+          'https://example.com/images/titanic-title.jpg'
+      ),
+      (
+          'The Avengers',
+          'Earth`s mightiest heroes must come together to stop Loki.',
+          143, '2012-05-04',
+          'Joss Whedon', 8.0, 'USA', 13,
+          'https://example.com/trailers/avengers.mp4',
+          'https://example.com/images/avengers-cover.jpg',
+          'https://example.com/images/avengers-title.jpg'
+      ),
+      (
+          'La La Land',
+          'A jazz pianist and an aspiring actress fall in love.',
+          128, '2016-12-09',
+          'Damien Chazelle', 8.0, 'USA', 13,
+          'https://example.com/trailers/la-la-land.mp4',
+          'https://example.com/images/la-la-land-cover.jpg',
+          'https://example.com/images/la-la-land-title.jpg'
+      ),
+      (
+          'Gladiator',
+          'A Roman general seeks revenge.',
+          155, '2000-05-05',
+          'Ridley Scott', 8.5, 'USA', 16,
+          'https://example.com/trailers/gladiator.mp4',
+          'https://example.com/images/gladiator-cover.jpg',
+          'https://example.com/images/gladiator-title.jpg'
+      ),
+      (
+          'The Matrix',
+          'A hacker learns about the true nature of his reality.',
+          136, '1999-03-31',
+          'Lana Wachowski', 8.7, 'USA', 16,
+          'https://example.com/trailers/matrix.mp4',
+          'https://example.com/images/matrix-cover.jpg',
+          'https://example.com/images/matrix-title.jpg'
+      ),
+      (
+          'Interstellar',
+          'Explorers travel through a wormhole in space.',
+          169, '2014-11-07',
+          'Christopher Nolan', 8.6, 'USA', 13,
+          'https://example.com/trailers/interstellar.mp4',
+          'https://example.com/images/interstellar-cover.jpg',
+          'https://example.com/images/interstellar-title.jpg'
+      ),
+      (
+          'The Shawshank Redemption',
+          'Two imprisoned men bond over years.',
+          142, '1994-09-23',
+          'Frank Darabont', 9.3, 'USA', 16,
+          'https://example.com/trailers/shawshank.mp4',
+          'https://example.com/images/shawshank-cover.jpg',
+          'https://example.com/images/shawshank-title.jpg'
+      ),
+      (
+          'Black Panther',
+          'The king of Wakanda faces new challenges.',
+          134, '2018-02-16',
+          'Ryan Coogler', 7.3, 'USA', 13,
+          'https://example.com/trailers/black-panther.mp4',
+          'https://example.com/images/black-panther-cover.jpg',
+          'https://example.com/images/black-panther-title.jpg'
+      ),
+      (
+          'The Godfather',
+          'The aging patriarch of an organized crime dynasty transfers control.',
+          175, '1972-03-24',
+          'Francis Ford Coppola', 9.2, 'USA', 18,
+          'https://example.com/trailers/godfather.mp4',
+          'https://example.com/images/godfather-cover.jpg',
+          'https://example.com/images/godfather-title.jpg'
+      ),
+      (
+          'Joker',
+          'Origin story of the iconic Batman villain.',
+          122, '2019-10-04',
+          'Todd Phillips', 8.4, 'USA', 18,
+          'https://example.com/trailers/joker.mp4',
+          'https://example.com/images/joker-cover.jpg',
+          'https://example.com/images/joker-title.jpg'
+      ),
+      (
+          'Frozen',
+          'A princess with ice powers embarks on a journey.',
+          102, '2013-11-27',
+          'Chris Buck', 7.4, 'USA', 0,
+          'https://example.com/trailers/frozen.mp4',
+          'https://example.com/images/frozen-cover.jpg',
+          'https://example.com/images/frozen-title.jpg'
+      ),
+      (
+          'The Lion King',
+          'A lion prince flees his kingdom.',
+          88, '1994-06-15',
+          'Roger Allers', 8.5, 'USA', 0,
+          'https://example.com/trailers/lion-king.mp4',
+          'https://example.com/images/lion-king-cover.jpg',
+          'https://example.com/images/lion-king-title.jpg'
+      ),
+      (
+          'Spider-Man: No Way Home',
+          'Spider-Man faces multiverse threats.',
+          148, '2021-12-17',
+          'Jon Watts', 8.3, 'USA', 13,
+          'https://example.com/trailers/spider-man.mp4',
+          'https://example.com/images/spider-man-cover.jpg',
+          'https://example.com/images/spider-man-title.jpg'
+      ),
+      (
+          'Wonder Woman',
+          'An Amazonian princess leaves her island.',
+          141, '2017-06-02',
+          'Patty Jenkins', 7.4, 'USA', 13,
+          'https://example.com/trailers/wonder-woman.mp4',
+          'https://example.com/images/wonder-woman-cover.jpg',
+          'https://example.com/images/wonder-woman-title.jpg'
+      ),
+      (
+          'Saving Private Ryan',
+          'World War II rescue mission.',
+          169, '1998-07-24',
+          'Steven Spielberg', 8.6, 'USA', 16,
+          'https://example.com/trailers/saving-ryan.mp4',
+          'https://example.com/images/saving-ryan-cover.jpg',
+          'https://example.com/images/saving-ryan-title.jpg'
+      ),
+      (
+          'Toy Story',
+          'Toys come to life when humans aren`t around.',
+          81, '1995-11-22',
+          'John Lasseter', 8.3, 'USA', 0,
+          'https://example.com/trailers/toy-story.mp4',
+          'https://example.com/images/toy-story-cover.jpg',
+          'https://example.com/images/toy-story-title.jpg'
+      ),
+      (
+          'The Social Network',
+          'Story of Facebook`s founding.',
+          120, '2010-10-01',
+          'David Fincher', 7.7, 'USA', 13,
+          'https://example.com/trailers/social-network.mp4',
+          'https://example.com/images/social-network-cover.jpg',
+          'https://example.com/images/social-network-title.jpg'
+      );
+
+-- Актори з URL-ами фото
+INSERT INTO actor (
+    first_name, last_name, birth_date, photo
+) VALUES
+      ('Robert', 'Downey Jr.', '1965-04-04',   'https://example.com/photos/robert-downey-jr.jpg'),
+      ('Scarlett', 'Johansson', '1984-11-22',  'https://example.com/photos/scarlett-johansson.jpg'),
+      ('Chris', 'Evans', '1981-06-13',         'https://example.com/photos/chris-evans.jpg'),
+      ('Jennifer', 'Lawrence', '1990-08-15',   'https://example.com/photos/jennifer-lawrence.jpg'),
+      ('Leonardo', 'DiCaprio', '1974-11-11',   'https://example.com/photos/leonardo-dicaprio.jpg'),
+      ('Natalie', 'Portman', '1981-06-09',     'https://example.com/photos/natalie-portman.jpg'),
+      ('Morgan', 'Freeman', '1937-06-01',      'https://example.com/photos/morgan-freeman.jpg'),
+      ('Meryl', 'Streep', '1949-06-22',        'https://example.com/photos/meryl-streep.jpg'),
+      ('Tom', 'Hanks', '1956-07-09',           'https://example.com/photos/tom-hanks.jpg'),
+      ('Emma', 'Stone', '1988-11-06',          'https://example.com/photos/emma-stone.jpg'),
+      ('Brad', 'Pitt', '1963-12-18',           'https://example.com/photos/brad-pitt.jpg'),
+      ('Angelina', 'Jolie', '1975-06-04',      'https://example.com/photos/angelina-jolie.jpg'),
+      ('Denzel', 'Washington', '1954-12-28',   'https://example.com/photos/denzel-washington.jpg'),
+      ('Anne', 'Hathaway', '1982-11-12',       'https://example.com/photos/anne-hathaway.jpg'),
+      ('Hugh', 'Jackman', '1968-10-12',        'https://example.com/photos/hugh-jackman.jpg'),
+      ('Gal', 'Gadot', '1985-04-30',           'https://example.com/photos/gal-gadot.jpg'),
+      ('Ryan', 'Gosling', '1980-11-12',        'https://example.com/photos/ryan-gosling.jpg'),
+      ('Zendaya', 'Coleman', '1996-09-01',     'https://example.com/photos/zendaya.jpg'),
+      ('Samuel', 'Jackson', '1948-12-21',      'https://example.com/photos/samuel-jackson.jpg'),
+      ('Cate', 'Blanchett', '1969-05-14',      'https://example.com/photos/cate-blanchett.jpg');
 
 INSERT INTO genre (name)
 VALUES ('Action'),
@@ -41,29 +231,6 @@ VALUES ('Action'),
        ('Western'),
        ('Sport'),
        ('History');
-
-INSERT INTO film (title, description, duration_minutes, release_date, director, rating, country, age_restriction)
-VALUES
-    ('Inception', 'A thief who steals corporate secrets through the use of dream-sharing technology.', 148, '2010-07-16', 'Christopher Nolan', 8.8, 'USA', 13),
-    ('The Dark Knight', 'Batman battles the Joker in Gotham City.', 152, '2008-07-18', 'Christopher Nolan', 9.0, 'USA', 13),
-    ('Forrest Gump', 'Life story of Forrest Gump, a slow-witted but kind-hearted man.', 142, '1994-07-06', 'Robert Zemeckis', 8.8, 'USA', 13),
-    ('Titanic', 'A romance unfolds aboard the doomed Titanic.', 195, '1997-12-19', 'James Cameron', 7.8, 'USA', 13),
-    ('The Avengers', 'Earth`s mightiest heroes must come together to stop Loki.', 143, '2012-05-04', 'Joss Whedon', 8.0, 'USA', 13),
-    ('La La Land', 'A jazz pianist and an aspiring actress fall in love.', 128, '2016-12-09', 'Damien Chazelle', 8.0, 'USA', 13),
-    ('Gladiator', 'A Roman general seeks revenge.', 155, '2000-05-05', 'Ridley Scott', 8.5, 'USA', 16),
-    ('The Matrix', 'A hacker learns about the true nature of his reality.', 136, '1999-03-31', 'Lana Wachowski', 8.7, 'USA', 16),
-    ('Interstellar', 'Explorers travel through a wormhole in space.', 169, '2014-11-07', 'Christopher Nolan', 8.6, 'USA', 13),
-    ('The Shawshank Redemption', 'Two imprisoned men bond over years.', 142, '1994-09-23', 'Frank Darabont', 9.3, 'USA', 16),
-    ('Black Panther', 'The king of Wakanda faces new challenges.', 134, '2018-02-16', 'Ryan Coogler', 7.3, 'USA', 13),
-    ('The Godfather', 'The aging patriarch of an organized crime dynasty transfers control.', 175, '1972-03-24', 'Francis Ford Coppola', 9.2, 'USA', 18),
-    ('Joker', 'Origin story of the iconic Batman villain.', 122, '2019-10-04', 'Todd Phillips', 8.4, 'USA', 18),
-    ('Frozen', 'A princess with ice powers embarks on a journey.', 102, '2013-11-27', 'Chris Buck', 7.4, 'USA', 0),
-    ('The Lion King', 'A lion prince flees his kingdom.', 88, '1994-06-15', 'Roger Allers', 8.5, 'USA', 0),
-    ('Spider-Man: No Way Home', 'Spider-Man faces multiverse threats.', 148, '2021-12-17', 'Jon Watts', 8.3, 'USA', 13),
-    ('Wonder Woman', 'An Amazonian princess leaves her island.', 141, '2017-06-02', 'Patty Jenkins', 7.4, 'USA', 13),
-    ('Saving Private Ryan', 'World War II rescue mission.', 169, '1998-07-24', 'Steven Spielberg', 8.6, 'USA', 16),
-    ('Toy Story', 'Toys come to life when humans aren`t around.', 81, '1995-11-22', 'John Lasseter', 8.3, 'USA', 0),
-    ('The Social Network', 'Story of Facebook`s founding.', 120, '2010-10-01', 'David Fincher', 7.7, 'USA', 13);
 
 -- Inception (film_id = 1) - актори: Leonardo DiCaprio (5)
 INSERT INTO film_actor (film_id, actor_id) VALUES (1, 5);

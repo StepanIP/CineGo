@@ -1,5 +1,7 @@
 package com.user.domain.dto;
 
+import java.time.LocalDate;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -24,4 +26,6 @@ public class SignUpRequest {
 
     @Size(max = 255)
     private String password;
+
+    private LocalDate birthDate;
 }

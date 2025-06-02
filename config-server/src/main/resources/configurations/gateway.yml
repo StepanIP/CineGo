@@ -18,6 +18,12 @@ spring:
             - Path=/api/v1/films/**, /api/v1/actors/**, /api/v1/genres/**
           filters:
             - AuthenticationFilter
+        - id: payments
+          uri: http://localhost:8050
+          predicates:
+            - Path=/api/v1/payment/**
+          filters:
+            - AuthenticationFilter
         - id: screenings
           uri: http://localhost:8060
           predicates:

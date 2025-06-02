@@ -48,6 +48,12 @@ public class User implements UserDetails {
     @Column(name = "role", nullable = false)
     private Role role;
 
+    @Column(name = "birth_date")
+    private String birthDate;
+
+    @Column(name = "is_student", nullable = false)
+    private boolean isStudent;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

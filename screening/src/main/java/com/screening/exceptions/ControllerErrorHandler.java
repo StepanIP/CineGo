@@ -1,6 +1,5 @@
 package com.screening.exceptions;
 
-import com.screening.common.exception.exceptions.*;
 import com.screening.domain.dto.ErrorResponse;
 import lombok.extern.log4j.Log4j2;
 

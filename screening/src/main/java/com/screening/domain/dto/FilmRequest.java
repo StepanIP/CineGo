@@ -3,7 +3,7 @@ package com.screening.domain.dto;
 import java.time.LocalDate;
 import java.util.List;
 
-public record Film(
+public record FilmRequest(
     Long id,
     String title,
     String description,
@@ -14,8 +14,8 @@ public record Film(
     Double rating,
     String country,
     Integer ageRestriction,
+    String trailerUrl,
+    String coverImage,
+    String titleImage,
     List<ActorResponseDto> actors
 ) {}
-
-
-

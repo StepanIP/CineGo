@@ -1,10 +1,10 @@
 package com.screening.service;
 
 import com.screening.domain.dto.CinemaDto;
+import com.screening.domain.dto.FilmRequest;
 import com.screening.mapper.CinemaMapper;
 import com.screening.domain.model.Screening;
 import com.screening.domain.dto.CreatedScreeningDto;
-import com.screening.domain.dto.Film;
 import com.screening.domain.dto.ScreeningAvailableSeats;
 import com.screening.domain.dto.ScreeningRequestDto;
 import com.screening.domain.dto.ScreeningResponseDto;
@@ -50,7 +50,7 @@ public class ScreeningService implements ScreeningFacade {
 
     @Transactional
     public CreatedScreeningDto saveScreening(ScreeningRequestDto screeningRequestDto, Long filmId) {
-        Film film = validateAndGetFilm(filmId);
+        FilmRequest film = validateAndGetFilm(filmId);
         validateScreeningData(screeningRequestDto, film);
 
         Screening screening = createAndSaveScreening(screeningRequestDto, film);
@@ -60,8 +60,8 @@ public class ScreeningService implements ScreeningFacade {
         return mapper.createdEntityToDto(screening);
     }
 
-    private Film validateAndGetFilm(Long filmId) {
-        Film film = filmClient.findFilmById(filmId);
+    private FilmRequest validateAndGetFilm(Long filmId) {
+        FilmRequest film = filmClient.findFilmById(filmId);
         log.info("Film found: {}", film.id());
         return film;
     }
@@ -71,11 +71,11 @@ public class ScreeningService implements ScreeningFacade {
     }
 
     @Transactional
-    public void validateScreeningData(ScreeningRequestDto screeningRequestDto, Film film) {
+    public void validateScreeningData(ScreeningRequestDto screeningRequestDto, FilmRequest film) {
         validate.dataValidation(screeningRequestDto, film);
     }
 
-    private Screening createAndSaveScreening(ScreeningRequestDto screeningRequestDto, Film film) {
+    private Screening createAndSaveScreening(ScreeningRequestDto screeningRequestDto, FilmRequest film) {
         Screening screening = mapper.dtoToEntity(screeningRequestDto);
         screening.setFilmId(film.id());
         return repository.save(screening);
@@ -88,8 +88,8 @@ public class ScreeningService implements ScreeningFacade {
 
     public ScreeningResponseDto getScreeningWithFilm(Long id) {
         Screening screening = repository.findById(id).orElseThrow();
-        ResponseEntity<Film> filmResponse = filmClient.findById(screening.getFilmId());
-        Film film = filmResponse.getBody();
+        ResponseEntity<FilmRequest> filmResponse = filmClient.findById(screening.getFilmId());
+        FilmRequest film = filmResponse.getBody();
         CinemaDto cinema = cinemaMapper.toDto(screening.getCinema());
         return new ScreeningResponseDto(screening.getId(), screening.getDate(), screening.getTime(), film, cinema);
     }

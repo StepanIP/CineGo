@@ -5,7 +5,7 @@ import java.util.Optional;
 import com.paypal.api.payments.Payment;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.example.payment.client.CurrencyClient;
+import org.example.payment.client.CurrenciesClient;
 import org.example.payment.client.TicketClient;
 import org.example.payment.configuration.PayPalConfig;
 import org.example.payment.domain.dto.ExchangeRateRequest;
@@ -21,7 +21,7 @@ public class PaymentService {
 
     private final PayPalService payPalService;
 
-    private final CurrencyClient currencyClient;
+    private final CurrenciesClient currencyClient;
 
     private final TicketClient ticketClient;
 

@@ -9,12 +9,12 @@ server:
   port: 8050
 spring:
   liquibase:
-    change-log: classpath:film-liquibase-changeLog.xml
+    change-log: classpath:liquibase-changeLog.xml
   application:
     name: payment
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5454/payment
+    url: jdbc:postgresql://localhost:5454/payments
     username: postgres
     password: password
   jpa:
@@ -23,7 +23,18 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-
+application:
+  config:
+    screenings-url: http://localhost:8060/api/v1/screenings
+    currencies-url: http://localhost:8000/api/v1/codes
+paypal:
+  client-id: ${PAYPAL_CLIENT_ID}
+  client-secret: ${PAYPAL_CLIENT_SECRET}
+  mode: sandbox #sandbox for testing, live for production
+  redirect-url:
+    success: http://localhost:8222/payment/success
+    cancel: http://localhost:8222/payment/cancel
+    error: http://localhost:8222/payment/error
 management:
   tracing:
     sampling:

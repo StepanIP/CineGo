@@ -1,12 +1,12 @@
 package com.screening.validator;
 
+import com.screening.domain.dto.FilmRequest;
 import com.screening.exceptions.InvalidDateRangeException;
 import com.screening.exceptions.NotFoundException;
 import com.screening.exceptions.TimeDifferenceException;
 import com.screening.exceptions.TooLateException;
 import com.screening.exceptions.TooManyScreeningException;
 import com.screening.domain.model.Screening;
-import com.screening.domain.dto.Film;
 import com.screening.domain.dto.ScreeningRequestDto;
 
 import com.screening.repository.ScreeningRepository;
@@ -55,7 +55,7 @@ public class ScreeningValidate {
         throw new TooLateException("It isn't possible to create new screening earlier than the current time");
     }
 
-    public void dataValidation(ScreeningRequestDto screeningRequestDto, Film film) {
+    public void dataValidation(ScreeningRequestDto screeningRequestDto, FilmRequest film) {
         List<Screening> screeningsOnSameDay = getScreeningsByDate(screeningRequestDto.date());
 
         checkNumberOfScreeningsDuringDay(screeningsOnSameDay);
@@ -67,7 +67,7 @@ public class ScreeningValidate {
         return repository.findScreeningsByDate(date);
     }
 
-    private void checkMinTimeDifference(ScreeningRequestDto newScreening, Film film, List<Screening> screeningsOnSameDay) {
+    private void checkMinTimeDifference(ScreeningRequestDto newScreening, FilmRequest film, List<Screening> screeningsOnSameDay) {
         for (Screening existingScreening : screeningsOnSameDay) {
             long timeDifference = Duration.between(existingScreening.getTime(), newScreening.time()).toMinutes();
             if (Math.abs(timeDifference) < film.durationFilmInMinutes() + 20) {
