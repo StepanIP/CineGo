@@ -1,8 +1,8 @@
 package com.ticket.ticketingSystem.service;
 
 import com.ticket.ticketingSystem.exceptions.exception.NotFoundException;
-import com.ticket.feignClient.ScreeningClient;
-import com.ticket.feignClient.UserClient;
+import com.ticket.ticketingSystem.client.ScreeningClient;
+import com.ticket.ticketingSystem.client.UserClient;
 import com.ticket.ticketingSystem.exceptions.exception.TooLateToBookException;
 
 import com.ticket.ticketingSystem.dto.EmailWithTicket;
@@ -46,17 +46,21 @@ public class TicketService {
 
     private final TicketMapper mapper;
 
-    @Transactional
-    public TicketBookedDto bookTicket(Long screeningId, Long userId, TicketBookingDto ticketBookingDto) {
+    public void sendTicket(Long ticketId) {
+        Ticket ticket = ticketRepository.findById(ticketId).orElseThrow(() -> new NotFoundException(NOT_FOUND_BY_ID, ticketId));
+        ticket.setStatus(TicketStatus.ACTIVE);
+        kafkaProducer.sendMessage("emailWithTicketTopic", createEmail(ticket.getUserId().toString(), ticket));
+        log.info("Sending email with ticket: {}", ticket);
+    }
+
+    public TicketBookedDto createTicket(Long screeningId, Long userId, TicketBookingDto ticketBookingDto) {
         UserResponseDto user = userClient.findUserById(userId);
         ScreeningDto screening = screeningClient.findScreeningById(screeningId);
         checkBookingTime(screening);
         Ticket newTicket = createNewTicket(screening, user, ticketBookingDto);
-        screeningClient.bookingSets(screeningId, ticketBookingDto.rowsNumber(), ticketBookingDto.seatInRow());
+        newTicket.setStatus(TicketStatus.PENDING);
         ticketRepository.save(newTicket);
-        log.info("Booking ticket with screening ID : {} row: {} seat: {}", screeningId, ticketBookingDto.rowsNumber(), ticketBookingDto.seatInRow());
-
-        kafkaProducer.sendMessage("emailWithTicketTopic", createEmail(user.email(), newTicket));
+        log.info("Creating ticket with screening ID : {} row: {} seat: {}", screeningId, ticketBookingDto.rowsNumber(), ticketBookingDto.seatInRow());
 
         return mapper.bookedTicketToDto(newTicket);
     }
@@ -87,7 +91,6 @@ public class TicketService {
     @Transactional
     public void cancelTicket(Long ticketId) {
         Ticket ticket = ticketRepository.findById(ticketId).orElseThrow(() -> new NotFoundException(NOT_FOUND_BY_ID, ticketId));
-        ticket.setStatus(TicketStatus.CANCELLED);
         ticketRepository.delete(ticket);
     }
 

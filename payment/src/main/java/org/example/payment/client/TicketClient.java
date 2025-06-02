@@ -1,13 +1,16 @@
 package org.example.payment.client;
 
-import org.springframework.stereotype.Component;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
-@Component
-public class TicketClient {
+@FeignClient(name = "screening-service", url = "/api/v1/tickets")
+public interface TicketClient {
 
-    public void sendTicketToUser(Long ticketId) {
-        // TODO: відправити REST запит до ticket-сервісу
-        // Наприклад:
-        // restTemplate.postForObject(...);
-    }
+    @PostMapping("/send/{ticketId}")
+    void sendTicketToUser(@PathVariable Long ticketId);
+
+    @DeleteMapping("/{ticketId}")
+    void deleteTicket(@PathVariable Long ticketId);
 }

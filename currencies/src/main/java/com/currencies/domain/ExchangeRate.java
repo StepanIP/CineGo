@@ -1,4 +1,4 @@
-package com.currencies;
+package com.currencies.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

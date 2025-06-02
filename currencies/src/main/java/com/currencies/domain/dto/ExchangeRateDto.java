@@ -1,4 +1,4 @@
-package com.currencies.dto;
+package com.currencies.domain.dto;
 
 public record ExchangeRateDto(
     int r030,

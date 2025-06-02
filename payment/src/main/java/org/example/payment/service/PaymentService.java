@@ -3,10 +3,12 @@ package org.example.payment.service;
 import java.util.Optional;
 
 import com.paypal.api.payments.Payment;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.example.payment.client.CurrencyClient;
 import org.example.payment.client.TicketClient;
 import org.example.payment.configuration.PayPalConfig;
+import org.example.payment.domain.dto.ExchangeRateRequest;
 import org.example.payment.domain.dto.PaymentRequestDto;
 import org.example.payment.domain.model.PaymentStatus;
 import org.example.payment.repository.PaymentRepository;
@@ -32,9 +34,15 @@ public class PaymentService {
             ? dto.currency()
             : "EUR";
 
+        ExchangeRateRequest exchangeRateRequest = ExchangeRateRequest.builder()
+            .amount(dto.total())
+            .from(dto.currency())
+            .to(supportedCurrency)
+            .build();
+
         double convertedTotal = supportedCurrency.equals(dto.currency())
             ? dto.total()
-            : currencyClient.convert(dto.total(), dto.currency(), "EUR");
+            : Double.parseDouble(currencyClient.convert(exchangeRateRequest).currency());
 
         org.example.payment.domain.model.Payment payment = paymentRepository.save(org.example.payment.domain.model.Payment.builder()
             .amount(convertedTotal)
@@ -69,16 +77,21 @@ public class PaymentService {
                 ticketClient.sendTicketToUser(entity.getTicketId());
             } else {
                 entity.setStatus(PaymentStatus.FAILED);
+                ticketClient.deleteTicket(entity.getTicketId());
                 paymentRepository.save(entity);
             }
         }
     }
 
-    public void cancelPayment(Long id) {
-        paymentRepository.findById(id)
-            .ifPresent(entity -> {
-                entity.setStatus(PaymentStatus.CANCELED);
-                paymentRepository.save(entity);
-            });
+    public void cancelPayment(Long id, PaymentStatus status) {
+        org.example.payment.domain.model.Payment payment = paymentRepository.findById(id)
+            .orElseThrow(() -> new EntityNotFoundException("Payment not found with id: " + id));
+
+        payment.setStatus(status);
+        paymentRepository.save(payment);
+
+        if (status == PaymentStatus.FAILED) {
+            ticketClient.deleteTicket(payment.getTicketId());
+        }
     }
 }

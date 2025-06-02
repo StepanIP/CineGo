@@ -5,6 +5,4 @@ public enum Currency {
     CHF, GBP, UAH, JPY, CZK, DKK, ISK,
     NOK, SEK, RON, BGN, TRY, ILS, CLP, PHP, MXN,
     ZAR, BRL, MYR, IDR, INR, KRW, CNY, XDR,PLN
-
-
 }

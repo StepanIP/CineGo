@@ -1,7 +1,8 @@
 package com.currencies;
 
-import com.currencies.dto.ExchangeRateDto;
-import com.currencies.dto.ExchangeRateResponseDto;
+import com.currencies.domain.dto.ExchangeRateDto;
+import com.currencies.domain.dto.ExchangeRateResponse;
+import com.currencies.service.ExchangeRateService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.BeforeEach;
@@ -62,9 +63,9 @@ class ExchangeRateControllerTest {
     @DisplayName("Should return all currencies")
     void shouldReturnAllCurrencies() throws Exception {
 
-        List<ExchangeRateResponseDto> expectedCurrencies = List.of(
-            new ExchangeRateResponseDto("Euro", "EUR"),
-            new ExchangeRateResponseDto("US Dollar", "USD")
+        List<ExchangeRateResponse> expectedCurrencies = List.of(
+            new ExchangeRateResponse("Euro", "EUR"),
+            new ExchangeRateResponse("US Dollar", "USD")
         );
 
         given(service.findAllCurrency()).willReturn(expectedCurrencies);

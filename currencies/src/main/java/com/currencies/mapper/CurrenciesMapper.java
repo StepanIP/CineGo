@@ -1,14 +1,15 @@
-package com.currencies;
+package com.currencies.mapper;
 
-import com.currencies.dto.ExchangeRateDto;
-import com.currencies.dto.ExchangeRateResponseDto;
+import com.currencies.domain.ExchangeRate;
+import com.currencies.domain.dto.ExchangeRateDto;
+import com.currencies.domain.dto.ExchangeRateResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface CurrenciesMapper {
 
-    ExchangeRateResponseDto entityToResponseDto(ExchangeRate exchangeRate);
+    ExchangeRateResponse entityToResponseDto(ExchangeRate exchangeRate);
 
     @Mapping(target = "cc", source = "code")
     ExchangeRateDto entityToExchangeRateDto(ExchangeRate exchangeRate);

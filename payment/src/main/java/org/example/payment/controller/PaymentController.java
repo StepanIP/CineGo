@@ -34,9 +34,13 @@ public class PaymentController {
     }
 
     @GetMapping("/cancel/{paymentId}")
-    public String handleCancel(@PathVariable("paymentId") Long paymentId) {
-        paymentFacade.cancel(paymentId);
-        return "Payment cancelled";
+    public void handleCancel(@PathVariable("paymentId") Long paymentId) {
+        paymentFacade.processCancel(paymentId);
+    }
+
+    @GetMapping("/error/{paymentId}")
+    public void handleError(@PathVariable("paymentId") Long paymentId) {
+        paymentFacade.processError(paymentId);
     }
 }
 

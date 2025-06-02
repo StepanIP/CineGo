@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 public class GroupDiscount implements DiscountStrategy {
     @Override
     public BigDecimal apply(BigDecimal currentPrice, TicketBookingDto ticket, ScreeningDto screening) {
-        if (ticket.quantity() >= 3) {
-            return currentPrice.multiply(BigDecimal.valueOf(0.9));
-        }
+//        if (ticket.quantity() >= 3) {
+//            return currentPrice.multiply(BigDecimal.valueOf(0.9));
+//        }
         return currentPrice;
     }
 }

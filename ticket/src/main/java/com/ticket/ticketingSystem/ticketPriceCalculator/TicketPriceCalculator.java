@@ -7,7 +7,7 @@ import java.util.List;
 import com.ticket.ticketingSystem.dto.ExchangeRate;
 import com.ticket.ticketingSystem.dto.ScreeningDto;
 import com.ticket.ticketingSystem.dto.TicketBookingDto;
-import com.ticket.feignClient.CurrenciesClient;
+import com.ticket.ticketingSystem.client.CurrenciesClient;
 import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Component;

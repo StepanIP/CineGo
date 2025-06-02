@@ -1,6 +1,10 @@
 package com.currencies;
 
-import com.currencies.dto.ExchangeRateDto;
+import com.currencies.domain.ExchangeRate;
+import com.currencies.domain.dto.ExchangeRateDto;
+import com.currencies.mapper.CurrenciesMapper;
+import com.currencies.repository.ExchangeRateRepository;
+import com.currencies.service.ExchangeRateService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,12 +15,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
 
-import static org.mockito.Mockito.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.when;
 
 @SpringBootTest
 class ExchangeRateServiceTest {

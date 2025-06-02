@@ -1,4 +1,4 @@
-package com.ticket.feignClient;
+package com.ticket.ticketingSystem.client;
 
 import com.ticket.ticketingSystem.dto.UserResponseDto;
 

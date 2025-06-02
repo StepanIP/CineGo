@@ -1,6 +1,6 @@
-package com.currencies;
+package com.currencies.service;
 
-import com.currencies.dto.ExchangeRateDto;
+import com.currencies.domain.dto.ExchangeRateDto;
 import com.currencies.exception.exceptions.JsonParseException;
 import com.currencies.nbpApiClient.ExchangeRateApiClient;
 import com.fasterxml.jackson.core.type.TypeReference;

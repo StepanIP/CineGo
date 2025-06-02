@@ -1,13 +1,14 @@
 package org.example.payment.client;
 
-import org.springframework.stereotype.Component;
+import org.example.payment.domain.dto.ExchangeRateRequest;
+import org.example.payment.domain.dto.ExchangeRateResponse;
 
-@Component
-public class CurrencyClient {
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
 
-    public double convert(double amount, String from, String to) {
-        // TODO: реалізувати запит до Currency API (типу fixer.io або свій)
-        // Поки що мок
-        return amount * 0.93; // наприклад, з USD у EUR
-    }
+@FeignClient(name = "currency-service", url = "/api/v1/codes")
+public interface CurrencyClient {
+
+    @PostMapping("/exchange-rate")
+    ExchangeRateResponse convert(ExchangeRateRequest request);
 }

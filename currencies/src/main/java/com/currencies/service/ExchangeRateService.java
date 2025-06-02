@@ -1,8 +1,12 @@
-package com.currencies;
+package com.currencies.service;
 
-import com.currencies.dto.ExchangeRateDto;
-import com.currencies.dto.ExchangeRateResponseDto;
+import com.currencies.domain.ExchangeRate;
+import com.currencies.domain.dto.ExchangeRateDto;
+import com.currencies.domain.dto.ExchangeRateRequest;
+import com.currencies.domain.dto.ExchangeRateResponse;
 import com.currencies.exception.exceptions.NotFoundException;
+import com.currencies.mapper.CurrenciesMapper;
+import com.currencies.repository.ExchangeRateRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -15,7 +19,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Log4j2
-class ExchangeRateService {
+public class ExchangeRateService {
 
     private final ExchangeRateRepository repository;
 
@@ -27,7 +31,7 @@ class ExchangeRateService {
         return mapper.entityToExchangeRateDto(exchangeRate);
     }
 
-    public List<ExchangeRateResponseDto> findAllCurrency() {
+    public List<ExchangeRateResponse> findAllCurrency() {
         log.info("Returning all currency");
         return repository.findAll().stream()
             .map(mapper::entityToResponseDto)
@@ -63,4 +67,21 @@ class ExchangeRateService {
             log.info("Added UAH (гривня) base rate");
         }
     }
+
+    public ExchangeRateResponse exchangeRate(ExchangeRateRequest request) {
+        ExchangeRate fromRate = repository.findByCode(request.getFrom())
+            .orElseThrow(() -> new NotFoundException("Currency not found: %s", request.getFrom()));
+
+        ExchangeRate toRate = repository.findByCode(request.getTo())
+            .orElseThrow(() -> new NotFoundException("Currency not found: %s", request.getTo()));
+
+        double uahAmount = request.getAmount() * fromRate.getRate();
+        double convertedAmount = uahAmount / toRate.getRate();
+
+        log.info("Converted {} {} to {} {}",
+            request.getAmount(), fromRate.getCode(), convertedAmount, toRate.getCode());
+
+        return new ExchangeRateResponse(toRate.getCurrency(), toRate.getCode());
+    }
+
 }
