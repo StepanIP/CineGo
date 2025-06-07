@@ -1,10 +1,8 @@
 package com.screening.controller;
 
-import com.screening.cotroller.ScreeningController;
 import com.screening.domain.dto.*;
 import com.screening.domain.model.Cinema;
 import com.screening.service.ScreeningService;
-import com.service.film.domain.Genre;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

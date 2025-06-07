@@ -1,4 +1,4 @@
-package com.screening.cotroller;
+package com.screening.controller;
 
 import com.screening.domain.dto.CreatedScreeningDto;
 import com.screening.domain.dto.DiscountRequest;
@@ -6,7 +6,6 @@ import com.screening.domain.dto.DiscountResponse;
 import com.screening.domain.dto.ScreeningAvailableSeats;
 import com.screening.domain.dto.ScreeningRequestDto;
 import com.screening.domain.dto.ScreeningResponseDto;
-import com.screening.domain.dto.UserRequest;
 import com.screening.service.ScreeningService;
 import lombok.RequiredArgsConstructor;
 
@@ -60,6 +59,11 @@ public class ScreeningController {
     @GetMapping("/cinemaId")
     public List<ScreeningResponseDto> getScreeningsByCinemaId(@RequestParam("cinemaId") Long cinemaId) {
         return service.getScreeningsByCinemaId(cinemaId);
+    }
+
+    @GetMapping("/filmId")
+    public List<ScreeningResponseDto> getScreeningsByFilmId(@RequestParam("filmId") Long filmId) {
+        return service.getScreeningByFilmId(filmId);
     }
 
     @GetMapping("/discount")

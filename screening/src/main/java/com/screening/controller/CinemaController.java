@@ -1,4 +1,4 @@
-package com.screening.cotroller;
+package com.screening.controller;
 
 import com.screening.domain.dto.CinemaDto;
 import com.screening.service.CinemaService;

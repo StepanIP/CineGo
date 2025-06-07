@@ -22,4 +22,7 @@ public interface ScreeningRepository extends JpaRepository<Screening, Long> {
     boolean existsByDate(LocalDate date);
 
     List<Screening> findByCinemaId(Long cinemaId);
+
+    List<Screening> findByFilmId(Long filmId);
+
 }

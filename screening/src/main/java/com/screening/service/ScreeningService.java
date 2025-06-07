@@ -39,7 +39,7 @@ import java.util.stream.IntStream;
 @Log4j2
 public class ScreeningService implements ScreeningFacade {
 
-    private final ScreeningRepository repository;
+    private final ScreeningRepository screeningRepository;
 
     private final ScreeningMapper mapper;
 
@@ -81,7 +81,7 @@ public class ScreeningService implements ScreeningFacade {
     private Screening createAndSaveScreening(ScreeningRequestDto screeningRequestDto, FilmRequest film) {
         Screening screening = mapper.dtoToEntity(screeningRequestDto);
         screening.setFilmId(film.id());
-        return repository.save(screening);
+        return screeningRepository.save(screening);
     }
 
     private void assignSeatsToScreening(Screening screening) {
@@ -90,17 +90,25 @@ public class ScreeningService implements ScreeningFacade {
     }
 
     public ScreeningResponseDto getScreeningWithFilm(Long id) {
-        Screening screening = repository.findById(id).orElseThrow();
+        Screening screening = screeningRepository.findById(id).orElseThrow();
         ResponseEntity<FilmRequest> filmResponse = filmClient.findById(screening.getFilmId());
         FilmRequest film = filmResponse.getBody();
         CinemaDto cinema = cinemaMapper.toDto(screening.getCinema());
         return new ScreeningResponseDto(screening.getId(), screening.getDate(), screening.getTime(), film, cinema);
     }
 
+    public List<ScreeningResponseDto> getScreeningByFilmId(Long filmId) {
+        List<Screening> screening = screeningRepository.findByFilmId(filmId);
+        log.info("Found screenings {} with film id {}", screening, filmId);
+        return screening.stream()
+            .map(screeningItem -> getScreeningWithFilm(screeningItem.getId()))
+            .collect(Collectors.toList());
+    }
+
     public List<ScreeningResponseDto> getScreeningsByDate(LocalDate date) {
         validate.checkCorrectData(date);
 
-        List<Screening> screenings = repository.findScreeningsByDate(date);
+        List<Screening> screenings = screeningRepository.findScreeningsByDate(date);
 
         return screenings.stream()
             .map(screening -> getScreeningWithFilm(screening.getId()))
@@ -110,7 +118,7 @@ public class ScreeningService implements ScreeningFacade {
     public List<ScreeningResponseDto> getScreeningsByDateRange(LocalDate startDate, LocalDate endDate) {
         validate.checkCorrectDateRange(startDate, endDate);
 
-        List<Screening> screenings = repository.findScreeningsByDateBetween(startDate, endDate);
+        List<Screening> screenings = screeningRepository.findScreeningsByDateBetween(startDate, endDate);
 
         return screenings.stream()
             .map(screening -> getScreeningWithFilm(screening.getId()))
@@ -118,19 +126,19 @@ public class ScreeningService implements ScreeningFacade {
     }
 
     public Screening findById(Long screeningId) {
-        Screening screening = repository.findById(screeningId).orElseThrow(() -> new NotFoundException(SCREENING_NOT_FOUND, screeningId));
+        Screening screening = screeningRepository.findById(screeningId).orElseThrow(() -> new NotFoundException(SCREENING_NOT_FOUND, screeningId));
         log.info("Found screening with id {}", screeningId);
         return screening;
     }
 
     public ScreeningAvailableSeats findAvailableSeats(Long screeningId) {
-        Screening screening = repository.findById(screeningId).orElseThrow(() -> new NotFoundException(SCREENING_NOT_FOUND, screeningId));
+        Screening screening = screeningRepository.findById(screeningId).orElseThrow(() -> new NotFoundException(SCREENING_NOT_FOUND, screeningId));
         log.info("Found screening with id {}", screeningId);
         return mapper.screeningToSeatsDto(screening);
     }
 
-    public List<ScreeningResponseDto> getScreeningsByCinemaId(Long cinemaId) {
-        List<Screening> screenings = repository.findByCinemaId(cinemaId);
+    public List<ScreeningResponseDto> getScreeningsByCinemaId(Long filmLong) {
+        List<Screening> screenings = screeningRepository.findByCinemaId(filmLong);
         return screenings.stream()
             .map(screening -> getScreeningWithFilm(screening.getId()))
             .collect(Collectors.toList());
