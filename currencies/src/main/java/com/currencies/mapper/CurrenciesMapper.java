@@ -12,6 +12,7 @@ public interface CurrenciesMapper {
     ExchangeRateResponse entityToResponseDto(ExchangeRate exchangeRate);
 
     @Mapping(target = "cc", source = "code")
+    @Mapping(target = "txt", source = "currency")
     ExchangeRateDto entityToExchangeRateDto(ExchangeRate exchangeRate);
 
 }

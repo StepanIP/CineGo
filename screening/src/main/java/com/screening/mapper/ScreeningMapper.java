@@ -7,11 +7,12 @@ import com.screening.domain.dto.ScreeningRequestDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = CinemaMapperHelper.class)
 public interface ScreeningMapper {
 
-    Screening dtoToEntity(ScreeningRequestDto screeningRequestDto);
+
+    @Mapping(source = "cinemaId", target = "cinema")
+    Screening dtoToEntity(ScreeningRequestDto dto);
 
     ScreeningAvailableSeats screeningToSeatsDto(Screening screening);
 

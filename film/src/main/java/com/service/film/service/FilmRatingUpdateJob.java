@@ -1,5 +1,6 @@
 package com.service.film.service;
 
+import com.service.film.domain.Comment;
 import com.service.film.domain.Film;
 import com.service.film.repository.FilmRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class FilmRatingUpdateJob {
 
     private final FilmRepository filmRepository;
 
-    @Scheduled(cron = "0 0 0 * * *") // Run at midnight every day
+    @Scheduled(cron = "0 0 0 * * *")
     @Transactional
     public void updateFilmRatings() {
         log.info("Starting daily film ratings update");
@@ -25,7 +26,7 @@ public class FilmRatingUpdateJob {
         
         for (Film film : films) {
             double averageRating = film.getComments().stream()
-                .mapToInt(comment -> comment.getRating())
+                .mapToInt(Comment::getRating)
                 .average()
                 .orElse(0.0);
             

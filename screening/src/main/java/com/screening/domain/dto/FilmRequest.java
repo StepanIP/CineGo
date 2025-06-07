@@ -3,6 +3,9 @@ package com.screening.domain.dto;
 import java.time.LocalDate;
 import java.util.List;
 
+import lombok.Builder;
+
+@Builder
 public record FilmRequest(
     Long id,
     String title,
