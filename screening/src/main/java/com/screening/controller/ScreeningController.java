@@ -61,8 +61,8 @@ public class ScreeningController {
         return service.getScreeningsByCinemaId(cinemaId);
     }
 
-    @GetMapping("/filmId")
-    public List<ScreeningResponseDto> getScreeningsByFilmId(@RequestParam("filmId") Long filmId) {
+    @GetMapping("/{filmId}")
+    public List<ScreeningResponseDto> getScreeningsByFilmId(@PathVariable Long filmId) {
         return service.getScreeningByFilmId(filmId);
     }
 
