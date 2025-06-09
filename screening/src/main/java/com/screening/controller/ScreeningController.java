@@ -46,11 +46,6 @@ public class ScreeningController {
         return service.getScreeningWithFilm(screeningId);
     }
 
-    @GetMapping("/seats/{id}")
-    public ScreeningAvailableSeats findAvailableSeats(@PathVariable Long id) {
-        return service.findAvailableSeats(id);
-    }
-
     @PutMapping("/booking/seats/{screeningId}/{rowNumber}/{seatsNumber}")
     public void bookingSets(@PathVariable Long screeningId, @PathVariable int rowNumber, @PathVariable int seatsNumber) {
         service.bookingSets(screeningId, rowNumber, seatsNumber);

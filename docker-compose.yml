@@ -1,6 +1,39 @@
 version: '3'
 
 services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alert.rules.yml:/etc/prometheus/alert.rules.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--web.enable-lifecycle'
+
+  alertmanager:
+    image: prom/alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+
+  discord-relay:
+    image: benjojo/alertmanager-discord
+    ports:
+      - "8086:8080"
+    environment:
+      - DISCORD_WEBHOOK=https://discord.com/api/webhooks/1381375617848840232/y9y_wij32fkA-SdryOu8DM7mYIxx-njuX3Y4gsYEVQ53FYd7TjDvdrW5bofwmBKDmG8C
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
 
   elasticsearch:
     image: elasticsearch:8.17.1

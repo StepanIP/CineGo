@@ -1,0 +1,42 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 5m
+  receiver: 'discord-alerts'
+
+  routes:
+
+    - match:
+        alertname: HighLatencyDetected
+      receiver: email-alerts
+      continue: true 
+      
+    - match:
+        severity: critical
+      receiver: email-alerts
+      continue: true
+    
+    - match:
+        severity: critical
+      receiver: discord-alerts
+
+receivers:
+  - name: 'discord-alerts'
+    webhook_configs:
+      - url: 'http://discord-relay:9094'
+        send_resolved: true
+
+  - name: 'email-alerts'
+    email_configs:
+      - to: 'stepan.java.work@gmail.com'
+        from: 'testalerting@gmail.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: 'testalerting@gmail.com'
+        auth_identity: 'testalerting@gmail.com'
+        auth_password: 'new_secure_password'  # Replace with your actual app password
+        send_resolved: true
+

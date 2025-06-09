@@ -1,5 +1,7 @@
 package com.screening.service;
 
+import java.util.List;
+
 import com.screening.exceptions.AlreadyTakenException;
 import com.screening.exceptions.NotFoundException;
 import com.screening.domain.model.Screening;
@@ -43,6 +45,10 @@ public class SeatService implements SeatFacade {
             throw new NotFoundException(NOT_FOUND_SEAT, rowsNumber, seatInRow);
         }
 
+    }
+
+    public List<Seat> getSeatsByScreeningId(Long screeningId) {
+        return seatRepository.findByScreeningId(screeningId);
     }
 
     public Seat createSeat(int rowNumber, int seatInRow, SeatStatus status) {

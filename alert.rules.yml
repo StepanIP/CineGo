@@ -1,0 +1,30 @@
+groups:
+  - name: SimpleAlerts
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 10s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Instance is down"
+          description: "{{$labels.instance}} is not responding."
+
+      - alert: TooManyInstancesDown
+        expr: (count(up == 0) / count(up)) > 0.3
+        for: 10s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Too many instances down"
+          description: "{{ $value | humanizePercentage }} of all instances are down."
+          
+      - alert: HighLatencyDetected
+        expr: histogram_quantile(0.95, rate(http_server_requests_seconds_bucket{uri="/api/v1/films/{filmId}"}[10s])) > 0.05
+        for: 5s
+        labels:
+          severity: warning
+        annotations:
+          summary: "High latency detected"
+          description: "95th percentile latency is above 50ms for more than 5 seconds"
+

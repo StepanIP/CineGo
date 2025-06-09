@@ -1,8 +1,8 @@
 <configuration>
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>localhost:5044</destination>
+        <destination>localhost:5044</destination> <!-- Send logs to Logstash -->
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <customFields>{"app_name":"screening-service"}</customFields>
+            <customFields>{"app_name":"discovery-service"}</customFields>
         </encoder>
     </appender>
 
@@ -11,6 +11,10 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+
+    <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+        <customFields>{"app_name":"email-service"}</customFields>
+    </encoder>
 
     <root level="INFO">
         <appender-ref ref="LOGSTASH" />

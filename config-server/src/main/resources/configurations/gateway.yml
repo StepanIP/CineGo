@@ -27,7 +27,7 @@ spring:
         - id: screenings
           uri: http://localhost:8060
           predicates:
-            - Path=/api/v1/screenings/**
+            - Path=/api/v1/screenings/**, /api/v1/seats/**, /api/v1/cinemas/**
           filters:
             - AuthenticationFilter
         - id: currencies
@@ -58,3 +58,10 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+  endpoint:
+    prometheus:
+      enabled: true
