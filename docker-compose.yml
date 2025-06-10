@@ -208,6 +208,147 @@ services:
       - "5050:5432"
     volumes:
       - currencies-data:/var/lib/postgresql/data
+
+  # Microservices
+  config-server:
+    build: ./config-server
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    networks:
+      - zipkin_network
+      - kafka_network
+
+  discovery:
+    build: ./discovery
+    container_name: discovery
+    ports:
+      - "8761:8761"
+    depends_on:
+      - config-server
+    networks:
+      - zipkin_network
+      - kafka_network
+
+  gateway:
+    build: ./gateway
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - zipkin_network
+      - kafka_network
+
+  user-service:
+    build: ./user
+    container_name: user-service
+    depends_on:
+      - discovery
+      - config-server
+      - userDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://userDB:5432/users
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  film-service:
+    build: ./film
+    container_name: film-service
+    depends_on:
+      - discovery
+      - config-server
+      - filmDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://filmDB:5432/films
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  ticket-service:
+    build: ./ticket
+    container_name: ticket-service
+    depends_on:
+      - discovery
+      - config-server
+      - ticketsDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://ticketsDB:5432/tickets
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  screening-service:
+    build: ./screening
+    container_name: screening-service
+    depends_on:
+      - discovery
+      - config-server
+      - screeningDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://screeningDB:5432/screenings
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  payment-service:
+    build: ./payment
+    container_name: payment-service
+    depends_on:
+      - discovery
+      - config-server
+      - paymentDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://paymentDB:5432/payments
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  currencies-service:
+    build: ./currencies
+    container_name: currencies-service
+    depends_on:
+      - discovery
+      - config-server
+      - currenciesDB
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://currenciesDB:5432/currencies
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  emailsender-service:
+    build: ./emailsender
+    container_name: emailsender-service
+    depends_on:
+      - discovery
+      - config-server
+      - kafka
+    networks:
+      - zipkin_network
+      - kafka_network
+
 networks:
   zipkin_network:
     driver: bridge

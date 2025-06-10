@@ -14,6 +14,7 @@ import java.util.List;
 @Builder
 @Getter
 @Setter
+@ToString
 public class Screening extends AbstractEntity {
 
     @Id

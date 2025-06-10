@@ -2,4 +2,21 @@ spring:
   application:
     name: gateway
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/*]':
+            # Дозволяємо будь-який localhost з будь-яким портом
+            allowedOriginPatterns:
+              "http://localhost/:"
+            allowedMethods:
+              GET
+              POST
+              PUT
+              DELETE
+              OPTIONS
+            allowedHeaders:
+              "*"
+            allowCredentials: true
